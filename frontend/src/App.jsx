@@ -8,33 +8,51 @@ import {
   ShieldAlert, RefreshCw, Layers, Award 
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+import { API_BASE } from './config';
 
 function App() {
   const [activeTab, setActiveTab] = useState('map');
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [backendOnline, setBackendOnline] = useState(true);
 
-  // Fetch top-level global audit statistics
+  // Fetch top-level global audit statistics and check health
   useEffect(() => {
-    async function fetchGlobalStats() {
+    async function checkHealthAndFetchStats() {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
+
       try {
-        const response = await fetch(`${API_BASE}/api/stats/overview`);
+        const response = await fetch(`${API_BASE}/api/stats/overview`, {
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
         if (response.ok) {
           const data = await response.json();
           setStats(data);
+          setBackendOnline(true);
+        } else {
+          setBackendOnline(false);
+          console.error('Failed to load global compliance metrics: backend returned non-OK status');
         }
       } catch (err) {
-        console.error('Failed to load global compliance metrics', err);
+        clearTimeout(timeoutId);
+        console.error('Backend connection failed:', err);
+        setBackendOnline(false);
       } finally {
         setLoading(false);
       }
     }
-    fetchGlobalStats();
+    checkHealthAndFetchStats();
   }, []);
 
   return (
     <div className="min-h-screen bg-[#090D16] text-gray-100 flex flex-col font-sans">
+      {!backendOnline && (
+        <div className="w-full bg-red-600/90 border-b border-red-500 text-white py-2.5 px-6 text-center text-xs font-bold flex items-center justify-center gap-2 z-[2000] uppercase tracking-wide">
+          <span>⚠ Backend offline — start uvicorn before using the dashboard</span>
+        </div>
+      )}
       
       {/* Top Banner Navigation */}
       <header className="border-b border-darkBorder bg-darkCard/50 backdrop-blur-md sticky top-0 z-[1000] px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">

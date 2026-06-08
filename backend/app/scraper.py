@@ -36,6 +36,19 @@ CUISINES_POOL = [
 RESTAURANT_PREFIXES = ["Wow", "Royal", "Dilli", "Tandoori", "Sardarji", "Express", "Biryani", "Beijing", "Pizza", "Sweet", "Burger", "Hotel", "Cafe", "Gourmet"]
 RESTAURANT_SUFFIXES = ["Kitchen", "Darbar", "Bites", "Dhaba", "Point", "Palace", "House", "Stall", "Bazaar", "Corner", "Hub", "Central", "Nook", "Oasis"]
 
+BRAND_POOLS = {
+    "hub_1": ["Biryani Express", "Tandoori Darbar", "Royal Bites", "Wow Dhaba", "Dilli Corner", "Sardarji Point", "Beijing House", "Sweet Nook"],
+    "hub_2": ["Burger Oasis", "Pizza Central", "Gourmet Hub", "Cafe Bazaar", "Beijing Corner", "Hotel Dhaba", "Express Kitchen", "Royal Stall"],
+    "hub_3": ["Beijing Nook", "Wow Central", "Tandoori Point", "Sardarji Bites", "Sweet Palace", "Burger House", "Cafe Oasis", "Hotel Express"],
+    "hub_4": ["Royal Corner", "Dilli Express", "Biryani Stall", "Pizza Hub", "Gourmet Darbar", "Beijing Kitchen", "Wow House", "Sweet Point"],
+    "food_court_1": ["Punjab Grill", "Chai Point", "Momo Nation", "South Indian Express", "Burger Kingpin", "Kebab Lane", "Rolls Mania", "Waffle World"],
+    "food_court_2": ["Wrap Chic", "Curry Leaf", "Dimsum Hudson", "Pizza Vito", "Taco Town", "Noodle Station", "Sweet Chariot", "Biryani King"],
+    "food_court_3": ["The Salad Bowl", "Soup Kitchen", "Juice Junction", "Sandwich Club", "Pasta Bistro", "Gelato Roma", "Cafe Coffee Daydream", "Street Treat"],
+    "unused_pool_1": ["Desi Tadka", "China Town", "Chicking", "Tikka Town", "Dessert Garden", "Shake Shook", "Wok On Wheel", "Hot Pot"],
+    "unused_pool_2": ["Grill House", "Fried Chicken Club", "Subway Station", "Dosa Factory", "Lassi Shop", "Idli Junction", "Baking Bad", "Falafel Feast"],
+    "unused_pool_3": ["Crispy Crust", "Noodle Bar", "Momos Hub", "Biryani Queen", "Kathi Roll Zone", "Ice Cream Parlor", "Healthy Salad Co", "Waffle Club"]
+}
+
 CITY_ZONES = {
     "Bengaluru": {
         "center": (12.9716, 77.5946),
@@ -110,41 +123,44 @@ def generate_mock_snapshot_html(city: str, platform: str) -> str:
             # Large component (size 40)
             zone = "Koramangala"
             address = f"Cloud Kitchen Hub 1, Ground Floor, Koramangala Main Road, {city}"
-            pool = ["Biryani Express", "Tandoori Darbar", "Royal Bites", "Wow Dhaba", "Dilli Corner", "Sardarji Point", "Beijing House", "Sweet Nook"]
+            pool = BRAND_POOLS["hub_1"]
             brand_name = pool[i % len(pool)]
         elif i <= 35:
             # Large component (size 30)
             zone = "Indiranagar"
             address = f"Cloud Kitchen Hub 2, Ground Floor, Indiranagar Main Road, {city}"
-            pool = ["Burger Oasis", "Pizza Central", "Gourmet Hub", "Cafe Bazaar", "Beijing Corner", "Hotel Dhaba", "Express Kitchen", "Royal Stall"]
+            pool = BRAND_POOLS["hub_2"]
             brand_name = pool[i % len(pool)]
         elif i <= 45:
             # Large component (size 20)
             zone = "Jayanagar"
             address = f"Cloud Kitchen Hub 3, Ground Floor, Jayanagar Main Road, {city}"
-            pool = ["Beijing Nook", "Wow Central", "Tandoori Point", "Sardarji Bites", "Sweet Palace", "Burger House", "Cafe Oasis", "Hotel Express"]
+            pool = BRAND_POOLS["hub_3"]
             brand_name = pool[i % len(pool)]
         elif i <= 50:
             # Large component (size 10)
             zone = "HSR Layout"
             address = f"Cloud Kitchen Hub 4, Ground Floor, HSR Layout Main Road, {city}"
-            pool = ["Royal Corner", "Dilli Express", "Biryani Stall", "Pizza Hub", "Gourmet Darbar", "Beijing Kitchen", "Wow House", "Sweet Point"]
+            pool = BRAND_POOLS["hub_4"]
             brand_name = pool[i % len(pool)]
         elif i <= 54:
             # Medium component (size 8)
             zone = "Whitefield"
             address = f"Food Court Shop 1, Whitefield Commercial Complex, {city}"
-            brand_name = f"{pfx} {sfx}"
+            pool = BRAND_POOLS["food_court_1"]
+            brand_name = pool[i % len(pool)]
         elif i <= 57:
             # Medium component (size 6)
             zone = "Malleshwaram"
             address = f"Food Court Shop 2, Malleshwaram Commercial Complex, {city}"
-            brand_name = f"{pfx} {sfx}"
+            pool = BRAND_POOLS["food_court_2"]
+            brand_name = pool[i % len(pool)]
         elif i <= 59:
             # Small component (size 4)
             zone = "Koramangala"
             address = f"Food Court Shop 3, Koramangala Commercial Complex, {city}"
-            brand_name = f"{pfx} {sfx}"
+            pool = BRAND_POOLS["food_court_3"]
+            brand_name = pool[i % len(pool)]
         elif i <= 150:
             # Pair component (size 2) - shared between platforms
             zone = zones[i % len(zones)]

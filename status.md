@@ -14,14 +14,18 @@
 
 ## Current State & Action Items
 
-### Project Fully Completed
-- **Status:** All phases (Phases 1 to 7) are fully implemented, tested, and verified.
+### Project Fully Completed & Demo-Ready
+- **Status:** All phases and final cosmetic fixes are fully implemented, tested, and verified.
+- **Cosmetic Fixes Done:**
+  1. Expanded mock data generator to use 10 distinct brand pools (minimum 8 names each) for the hubs and food courts. Re-ran pipeline on a clean DB.
+  2. Integrated dynamic severity badges (`HIGH PRIORITY HUB` in red, `LOW RISK` in grey) in the Network Graph node inspection sidebar.
+  3. Added kitchen 🍳 emoji favicon to the React application.
 - **Live Run Instructions:**
   - Backend API: Run `$env:PYTHONPATH="backend"; .venv\Scripts\python -m uvicorn app.main:app --host 0.0.0.0 --port 8000` (Currently running at `http://localhost:8000`)
   - Frontend Dev: Run `npm run dev` in `frontend/` directory (Currently running at `http://localhost:5173`)
 
 ### Deliverables Verified
 - **Scraper**: Extracted 5,000 listing items across 10 cities and 2 platforms.
-- **Matcher**: Completed entity resolution against FSSAI database using Jaro-Winkler distance and identified all anomalies.
-- **Graph Engine**: Created NetworkX graph consisting of 5,000 nodes and 14,020 address/license sharing edges.
-- **Dashboard**: Leaflet.js choropleth map, D3 force-directed clustering visualization, AG Grid tables, and Recharts dashboard fully functional.
+- **Matcher**: Completed entity resolution against FSSAI database using Jaro-Winkler distance and identified all anomalies (1,570 Type A, 428 Type B, 684 Type C).
+- **Graph Engine**: Created NetworkX graph consisting of 5,000 nodes and 15,900 address/license sharing edges.
+- **Dashboard**: Leaflet.js choropleth map, D3 force-directed clustering visualization with interactive sidebars and badges, AG Grid tables, and Recharts dashboard fully functional.

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { Search, Eye, Filter, RefreshCw, ZoomIn, ZoomOut, Maximize2, ShieldAlert } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+import { API_BASE } from '../config';
 
 const CITIES = [
   'Bengaluru', 'Mumbai', 'Delhi', 'Hyderabad', 'Chennai', 
@@ -39,6 +39,7 @@ export default function NetworkGraph() {
         const data = await response.json();
         setGraphData(data);
       } catch (err) {
+        console.error('NetworkGraph fetch failed:', err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -468,9 +469,21 @@ export default function NetworkGraph() {
                         <p className="text-[10px] text-gray-400 font-bold uppercase mb-0.5">Zone</p>
                         <p className="text-gray-300">{selectedNode.zone}, {selectedNode.city}</p>
                       </div>
-                      <div className="text-right">
+                      <div className="text-right flex flex-col items-end">
                         <p className="text-[10px] text-gray-400 font-bold uppercase mb-0.5">Cluster Size</p>
-                        <p className="text-purple-400 font-bold font-mono">{selectedNode.component_size} Brands</p>
+                        <div className="flex items-center gap-1.5 justify-end">
+                          {selectedNode.component_size >= 10 && (
+                            <span className="px-1.5 py-0.5 rounded text-[9px] font-extrabold tracking-wide bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse uppercase">
+                              HIGH PRIORITY HUB
+                            </span>
+                          )}
+                          {selectedNode.component_size >= 2 && selectedNode.component_size <= 4 && (
+                            <span className="px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wide bg-gray-500/20 text-gray-400 border border-gray-500/30 uppercase">
+                              LOW RISK
+                            </span>
+                          )}
+                          <p className="text-purple-400 font-bold font-mono">{selectedNode.component_size} Brands</p>
+                        </div>
                       </div>
                     </div>
                   </div>

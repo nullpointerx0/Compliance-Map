@@ -4,7 +4,7 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { FileDown, Search, Filter, ShieldAlert, Check, RefreshCw } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+import { API_BASE } from '../config';
 
 const CITIES = [
   'Bengaluru', 'Mumbai', 'Delhi', 'Hyderabad', 'Chennai', 
@@ -249,7 +249,7 @@ export default function AnomalyTable() {
       </div>
 
       {/* Grid Canvas */}
-      <div className="flex-1 w-full relative ag-theme-quartz-dark rounded-lg overflow-hidden border border-darkBorder/40">
+      <div className="flex-1 w-full relative ag-theme-quartz-dark rounded-lg overflow-hidden border border-darkBorder/40" style={{ height: '100%', width: '100%' }}>
         {loading && (
           <div className="absolute inset-0 bg-darkBg/60 backdrop-blur-sm z-50 flex items-center justify-center">
             <div className="flex flex-col items-center gap-2 text-emerald-400 font-medium">
@@ -261,7 +261,7 @@ export default function AnomalyTable() {
         
         <AgGridReact
           ref={gridRef}
-          rowData={rowData || []}
+          rowData={Array.isArray(rowData) ? rowData : []}
           columnDefs={columnDefs}
           defaultColDef={defaultColDef}
           animateRows={true}

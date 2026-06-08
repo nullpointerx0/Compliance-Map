@@ -3,7 +3,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ShieldAlert, AlertTriangle, ShieldCheck, MapPin, Eye, Server, RefreshCw } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+import { API_BASE } from '../config';
 
 const CITIES = [
   'Bengaluru', 'Mumbai', 'Delhi', 'Hyderabad', 'Chennai', 
@@ -60,6 +60,7 @@ export default function CityMap() {
           setSelectedZone(data.features[0].properties);
         }
       } catch (err) {
+        console.error('CityMap fetch failed:', err);
         setError(err.message);
       } finally {
         setLoading(false);

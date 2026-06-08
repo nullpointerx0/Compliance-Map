@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import { BarChart3, PieChart as PieIcon, TrendingUp, DollarSign, Users, Award, ShieldCheck, RefreshCw } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+import { API_BASE } from '../config';
 
 const COLORS = ['#10B981', '#F59E0B', '#EF4444', '#8B5CF6']; // emerald, amber, red, purple
 
