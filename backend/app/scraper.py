@@ -98,18 +98,69 @@ def generate_mock_snapshot_html(city: str, platform: str) -> str:
     html_parts.append(f"<div id='listings-container' data-platform='{platform}' data-city='{city}'>")
 
     for i in range(1, 251):
-        # Generate stable names so Swiggy and Zomato have overlapping brand names (to test canonical grouping)
         base_index = i % 180
         pfx = RESTAURANT_PREFIXES[base_index % len(RESTAURANT_PREFIXES)]
         sfx = RESTAURANT_SUFFIXES[(base_index + 3) % len(RESTAURANT_SUFFIXES)]
         
+        zone = zones[i % len(zones)]
+        
+        # Power-law distribution to generate components of all sizes:
+        # Isolated (1), Pair (2), Small (3-4), Medium (5-9), and Large (10+)
+        if i <= 20:
+            # Large component (size 40)
+            zone = "Koramangala"
+            address = f"Cloud Kitchen Hub 1, Ground Floor, Koramangala Main Road, {city}"
+            pool = ["Biryani Express", "Tandoori Darbar", "Royal Bites", "Wow Dhaba", "Dilli Corner", "Sardarji Point", "Beijing House", "Sweet Nook"]
+            brand_name = pool[i % len(pool)]
+        elif i <= 35:
+            # Large component (size 30)
+            zone = "Indiranagar"
+            address = f"Cloud Kitchen Hub 2, Ground Floor, Indiranagar Main Road, {city}"
+            pool = ["Burger Oasis", "Pizza Central", "Gourmet Hub", "Cafe Bazaar", "Beijing Corner", "Hotel Dhaba", "Express Kitchen", "Royal Stall"]
+            brand_name = pool[i % len(pool)]
+        elif i <= 45:
+            # Large component (size 20)
+            zone = "Jayanagar"
+            address = f"Cloud Kitchen Hub 3, Ground Floor, Jayanagar Main Road, {city}"
+            pool = ["Beijing Nook", "Wow Central", "Tandoori Point", "Sardarji Bites", "Sweet Palace", "Burger House", "Cafe Oasis", "Hotel Express"]
+            brand_name = pool[i % len(pool)]
+        elif i <= 50:
+            # Large component (size 10)
+            zone = "HSR Layout"
+            address = f"Cloud Kitchen Hub 4, Ground Floor, HSR Layout Main Road, {city}"
+            pool = ["Royal Corner", "Dilli Express", "Biryani Stall", "Pizza Hub", "Gourmet Darbar", "Beijing Kitchen", "Wow House", "Sweet Point"]
+            brand_name = pool[i % len(pool)]
+        elif i <= 54:
+            # Medium component (size 8)
+            zone = "Whitefield"
+            address = f"Food Court Shop 1, Whitefield Commercial Complex, {city}"
+            brand_name = f"{pfx} {sfx}"
+        elif i <= 57:
+            # Medium component (size 6)
+            zone = "Malleshwaram"
+            address = f"Food Court Shop 2, Malleshwaram Commercial Complex, {city}"
+            brand_name = f"{pfx} {sfx}"
+        elif i <= 59:
+            # Small component (size 4)
+            zone = "Koramangala"
+            address = f"Food Court Shop 3, Koramangala Commercial Complex, {city}"
+            brand_name = f"{pfx} {sfx}"
+        elif i <= 150:
+            # Pair component (size 2) - shared between platforms
+            zone = zones[i % len(zones)]
+            address = f"Shop {i + 10}, Ground Floor, {zone} Main Road, near Metro station, {city}"
+            brand_name = f"{pfx} {sfx}"
+        else:
+            # Isolated component (size 1) - unique platform address
+            zone = zones[i % len(zones)]
+            address = f"Shop {i + 10}, Ground Floor, {zone} Main Road, {platform.capitalize()} Area, {city}"
+            brand_name = f"{pfx} {sfx}"
+            
         # 15% chance of brand being unique to platform, otherwise shared name
-        brand_name = f"{pfx} {sfx}"
         if i % 7 == 0:
             brand_name += f" ({platform.capitalize()})"
             
         slug = f"{brand_name.lower().replace(' ', '-').replace('(', '').replace(')', '')}-{city.lower()}-{platform}-{i}"
-        zone = zones[i % len(zones)]
         
         # Latitude / Longitude offset around city center
         lat_offset = random.uniform(-0.04, 0.04)
@@ -117,7 +168,6 @@ def generate_mock_snapshot_html(city: str, platform: str) -> str:
         lat = round(lat_center + lat_offset, 5)
         lng = round(lng_center + lng_offset, 5)
         
-        address = f"Shop {i + 10}, Ground Floor, {zone} Main Road, near Metro station, {city}"
         price = "₹" * (1 + (i % 3))
         cuisines = CUISINES_POOL[i % len(CUISINES_POOL)]
         
