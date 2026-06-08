@@ -1,0 +1,233 @@
+platform,brand_name,url_slug,city,zone,address,latitude,longitude,price_range,cuisine_tags,scraped_at
+swiggy,Pizza Hut,swiggy_9862,Mumbai,Bandra Kurla Complex,"Bandra, Mumbai",19.076,72.8777,₹₹,"[""Pizzas""]",2026-06-08T15:59:12.842509
+swiggy,KFC,swiggy_484594,Mumbai,Kurla West,"Kurla West, Mumbai",19.076,72.8777,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:59:12.843228
+swiggy,Barbeque Nation,swiggy_448490,Mumbai,Bandra Kurla Complex,"Bandra East, Mumbai",19.076,72.8777,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:59:12.843866
+swiggy,Domino's Pizza,swiggy_24463,Mumbai,Bandra Kurla Complex,"Vidyanagari Marg, Mumbai",19.076,72.8777,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:59:12.844527
+swiggy,Burger King,swiggy_78036,Mumbai,Santacruz East,"Central Plaza, Kalina, Mumbai",19.076,72.8777,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:59:12.845116
+swiggy,Theobroma,swiggy_5172,Mumbai,Bandra Kurla Complex,"Bandra East, Mumbai",19.076,72.8777,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:12.845745
+swiggy,Natural Ice Cream,swiggy_30889,Mumbai,Saki Naka,"Pheonix Market City, Mumbai",19.076,72.8777,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:12.846374
+swiggy,Subway,swiggy_31775,Mumbai,Bandra East,"The Capital Bandra Kurla Complex, Mumbai",19.076,72.8777,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:12.846959
+swiggy,Harvest Salad Co,swiggy_699105,Mumbai,Scruz Bandra East,"Kalina CST Road, Mumbai",19.076,72.8777,₹₹,"[""Salads"", ""Healthy Food"", ""Snacks""]",2026-06-08T15:59:12.847579
+swiggy,Charcoal Eats - Biryani & Beyond,swiggy_328878,Mumbai,"SANTACRUZ EAST, Kalina","Manipada Road, Mumbai",19.076,72.8777,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Mughlai""]",2026-06-08T15:59:12.848315
+swiggy,Louis Burger,swiggy_391816,Mumbai,Kalina,"Swastik Industrial Estate, Mumbai",19.076,72.8777,₹₹,"[""Burgers"", ""American"", ""Fast Food""]",2026-06-08T15:59:12.848715
+swiggy,Maiz Mexican Kitchen,swiggy_698272,Mumbai,BKC,"Kalina Cst Road, Mumbai",19.076,72.8777,₹₹,"[""Mexican"", ""Italian"", ""American""]",2026-06-08T15:59:12.849028
+swiggy,The Belgian Waffle Co.,swiggy_82668,Mumbai,Santacruz East,"Kalina, Mumbai",19.076,72.8777,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:59:12.849322
+swiggy,McDonald's,swiggy_32399,Mumbai,Santacruz East,"Kalina Artista, Mumbai",19.076,72.8777,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:59:12.849601
+swiggy,Dum Safar Biryani,swiggy_639509,Mumbai,Scruz Bandra East,"Bandra Kurla Complex, Mumbai",19.076,72.8777,₹₹,"[""Biryani"", ""Hyderabadi"", ""Kebabs"", ""North Indian"", ""barbeque""]",2026-06-08T15:59:12.849898
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576015,Mumbai,BKC,"Goodwill Premises, Mumbai",19.076,72.8777,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:12.850471
+swiggy,Grameen Kulfi,swiggy_351123,Mumbai,Bandra East,"Rahivashi Sevangh, Mumbai",19.076,72.8777,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:12.850777
+swiggy,Bombay Sweet Shop,swiggy_673363,Mumbai,Scruz Bandra East,"Vidyanagari Marg, Mumbai",19.076,72.8777,₹₹₹,"[""Sweets"", ""Desserts"", ""Snacks""]",2026-06-08T15:59:12.851089
+swiggy,"Bhatti Chicken - Grilled, NOT Fried!",swiggy_678583,Mumbai,Kurla West,"Gaurav Industrial Estate, Mumbai",19.076,72.8777,₹,"[""North Indian"", ""Snacks"", ""Fast Food"", ""Tandoor""]",2026-06-08T15:59:12.851386
+swiggy,Veg Meals By LunchBox,swiggy_263590,Mumbai,Santacruz East,"Kalina, Mumbai",19.076,72.8777,₹,"[""Thalis"", ""North Indian"", ""Biryani"", ""South Indian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:12.851709
+swiggy,KFC,swiggy_1355804,Mumbai,Kalina,"Central Plaza 166, Mumbai",19.076,72.8777,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:59:12.852190
+swiggy,Chicking,swiggy_445985,Mumbai,Kurla,"Lbs Road, Mumbai",19.076,72.8777,₹₹,"[""Snacks"", ""Grill"", ""Fast Food"", ""American"", ""Pizzas"", ""Mexican"", ""Beverages""]",2026-06-08T15:59:12.852858
+swiggy,Protein Chef,swiggy_781789,Mumbai,Chembur,"Shivaji Nagar, Mumbai",19.076,72.8777,₹₹,"[""Indian"", ""Fast Food"", ""Snacks""]",2026-06-08T15:59:12.853406
+swiggy,Gaurav Sweets And Namkeen,swiggy_764107,Mumbai,Ghatkopar,"Jayant Villa, Mumbai",19.076,72.8777,₹,"[""Gujarati"", ""Snacks"", ""Sweets""]",2026-06-08T15:59:12.853742
+swiggy,KFC,swiggy_185159,Mumbai,Kanakia Wall Street,"Andheri Kurla Road, Mumbai",19.1136,72.8697,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:59:19.375852
+swiggy,Pizza Hut,swiggy_9868,Mumbai,Andheri East,"Chakala, Mumbai",19.1136,72.8697,₹₹,"[""Pizzas""]",2026-06-08T15:59:19.376591
+swiggy,Barbeque Nation,swiggy_645233,Mumbai,TIMES SQUARE,"Marol, Mumbai",19.1136,72.8697,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:59:19.377227
+swiggy,Burger King,swiggy_5933,Mumbai,Marol,"Marol, Mumbai",19.1136,72.8697,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:59:19.377869
+swiggy,Domino's Pizza,swiggy_24528,Mumbai,Andheri East,"Zillion (Kanakia Space), Kurla, Mumbai",19.1136,72.8697,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:59:19.379291
+swiggy,Theobroma,swiggy_279854,Mumbai,Vile Parle East,"Vile Parle East, Mumbai",19.1136,72.8697,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:19.380174
+swiggy,McDonald's,swiggy_23703,Mumbai,Mahakali,"Mahakali, Mumbai",19.1136,72.8697,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:59:19.380530
+swiggy,Subway,swiggy_1963,Mumbai,Chakala,"Amrut Nagar, Mumbai",19.1136,72.8697,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:19.380846
+swiggy,Natural Ice Cream,swiggy_745005,Mumbai,Marol,"SALIM ESTATE, Mumbai",19.1136,72.8697,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:19.381135
+swiggy,The Belgian Waffle Co.,swiggy_38449,Mumbai,Andheri East,"Mahakali Caves Road, Mumbai",19.1136,72.8697,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T15:59:19.381409
+swiggy,La Pino'z Pizza,swiggy_454644,Mumbai,Andheri East,"Mahakali, Mumbai",19.1136,72.8697,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T15:59:19.381775
+swiggy,Charcoal Eats - Biryani & Beyond,swiggy_338057,Mumbai,Andheri East,"Near Andheri East Station, Mumbai",19.1136,72.8697,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Mughlai""]",2026-06-08T15:59:19.382105
+swiggy,Jumboking Burgers,swiggy_34459,Mumbai,Marol,"Airport Road Metro Station, Mumbai",19.1136,72.8697,₹,"[""Burgers"", ""American"", ""Beverages""]",2026-06-08T15:59:19.382385
+swiggy,Grameen Kulfi,swiggy_351101,Mumbai,Andheri East,"Near Shere Punjab, Mumbai",19.1136,72.8697,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:19.382706
+swiggy,Good Flippin' Burgers,swiggy_490631,Mumbai,Andheri East,"Saki Naka, Mumbai",19.1136,72.8697,₹₹,"[""Burgers"", ""American"", ""Fast Food"", ""Beverages""]",2026-06-08T15:59:19.383032
+swiggy,Nothing But Chicken,swiggy_29558,Mumbai,Andheri East,"Mahakali, Mumbai",19.1136,72.8697,₹₹,"[""Salads"", ""Biryani"", ""Kebabs"", ""Fast Food"", ""Healthy Food""]",2026-06-08T15:59:19.383361
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576027,Mumbai,Marol,"NEAR JALARAM STORE, Mumbai",19.1136,72.8697,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:59:19.383793
+swiggy,NIC Ice Creams,swiggy_67134,Mumbai,Andheri East,"Near Shere Punjab, Mumbai",19.1136,72.8697,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:19.384157
+swiggy,The Pizza Project by Oven Story,swiggy_837874,Mumbai,Andheri East,"Ground Floor, Nand Deep Industrial Estate, Kondivita Lane, Mumbai",19.1136,72.8697,₹₹,"[""Pizzas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:19.384510
+swiggy,Sandwizzaa- Mumbai's Best Sandwich,swiggy_24877,Mumbai,Vile Parle East,"Subhash Road, Mumbai",19.1136,72.8697,₹₹,"[""Snacks"", ""Fast Food"", ""Beverages"", ""Jain""]",2026-06-08T15:59:19.384870
+swiggy,Seoul Burgers & Shakes,swiggy_838677,Mumbai,Andher East,"Navpada, Mumbai",19.1136,72.8697,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:59:19.385197
+swiggy,Burger King,swiggy_959569,Mumbai,ANDHERI EAST,"MULGAON, Mumbai",19.1136,72.8697,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:59:19.385646
+swiggy,Truth Bowl,swiggy_1053798,Mumbai,Andheri East,"Ground Floor, Nand Deep Industrial Estate, Kondivita Lane, Mumbai",19.1136,72.8697,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:59:19.386353
+swiggy,Protein Chef,swiggy_782664,Mumbai,Marol Sakinaka,"H B Manzil Rauthri, Mumbai",19.1136,72.8697,₹₹,"[""Indian"", ""Fast Food"", ""Snacks""]",2026-06-08T15:59:19.386950
+swiggy,Pizza Hut,swiggy_683064,Mumbai,Mahalaxmi Malabar Hill,"Saat Rasta Circle, Mumbai",18.922,72.8347,₹₹,"[""Pizzas""]",2026-06-08T15:59:26.609439
+swiggy,Domino's Pizza,swiggy_24513,Mumbai,Colaba,"S.V. Road, Mumbai",18.922,72.8347,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:59:26.609897
+swiggy,Theobroma,swiggy_5168,Mumbai,Colaba,"Coloba, Mumbai",18.922,72.8347,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:26.610217
+swiggy,Subway,swiggy_25567,Mumbai,Colaba,"Next To Regal Cinema, Mumbai",18.922,72.8347,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:26.610532
+swiggy,McDonald's,swiggy_23670,Mumbai,Colaba,"Colaba, Mumbai",18.922,72.8347,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:59:26.610853
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576006,Mumbai,Fort,"SHAHID BHAGAT SINGH ROAD, Mumbai",18.922,72.8347,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:59:26.611142
+swiggy,TOSHIN Chocolatier Patissier,swiggy_697417,Mumbai,Fort Colaba,"Meadows House, Mumbai",18.922,72.8347,₹₹,"[""Desserts"", ""Ice Cream""]",2026-06-08T15:59:26.611410
+swiggy,Jia The Oriental Kitchen,swiggy_231198,Mumbai,Colaba,"Colaba, Mumbai",18.922,72.8347,₹₹₹,"[""Asian"", ""Sushi"", ""Japanese"", ""Chinese"", ""Thai"", ""Pan-Asian"", ""Desserts""]",2026-06-08T15:59:26.611704
+swiggy,Wow! Momo,swiggy_512590,Mumbai,Mumbai Central,"Navjivan Hsg. Society, Mumbai",18.922,72.8347,₹₹,"[""Momos"", ""Chinese"", ""fastfood"", ""Asian"", ""Beverages""]",2026-06-08T15:59:26.612015
+swiggy,Woodside Inn,swiggy_16191,Mumbai,Colaba,"Colaba, Mumbai",18.922,72.8347,₹₹₹,"[""Italian"", ""American""]",2026-06-08T15:59:26.612284
+swiggy,Kitchen Garden by Suzette,swiggy_243948,Mumbai,Colaba,"Colaba, Mumbai",18.922,72.8347,₹₹₹,"[""Salads"", ""sandwich"", ""Cafe""]",2026-06-08T15:59:26.612568
+swiggy,Monginis Cake Shop,swiggy_356430,Mumbai,Colaba,"Sbs Road, Mumbai",18.922,72.8347,₹₹,"[""Cakes & Pastries"", ""Bakery"", ""Desserts""]",2026-06-08T15:59:26.612862
+swiggy,PizzaExpress,swiggy_15838,Mumbai,Colaba,"Colaba, Mumbai",18.922,72.8347,₹₹,"[""Pizzas"", ""Italian""]",2026-06-08T15:59:26.613177
+swiggy,Faasos Signature Wraps & Rolls,swiggy_566456,Mumbai,Ballard Estate,"S B S Road, Mumbai",18.922,72.8347,₹₹,"[""Fast Food"", ""Snacks"", ""North Indian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:26.613495
+swiggy,Veg Meals By LunchBox,swiggy_263868,Mumbai,Sant Nivas,"S B S Road, Mumbai",18.922,72.8347,₹,"[""Thalis"", ""North Indian"", ""Biryani"", ""South Indian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:26.613850
+swiggy,Makhani Darbar,swiggy_801411,Mumbai,S B S Road,"Fort, Mumbai",18.922,72.8347,₹₹,"[""Biryani"", ""North Indian"", ""Kebabs"", ""Mughlai"", ""Beverages"", ""Desserts""]",2026-06-08T15:59:26.614147
+swiggy,NOTO Ice Cream and Desserts,swiggy_393005,Mumbai,Fort Colaba,"DADABHAI NAWROJI ROAD, Mumbai",18.922,72.8347,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:59:26.614468
+swiggy,Veg Darbar by Behrouz Biryani,swiggy_575197,Mumbai,Ballard Estate,"S B S Road, Mumbai",18.922,72.8347,₹₹₹,"[""Biryani"", ""North Indian"", ""Kebabs"", ""Mughlai"", ""Beverages"", ""Desserts""]",2026-06-08T15:59:26.614782
+swiggy,Behrouz Biryani,swiggy_253210,Mumbai,Sant Nivas,"S B S Road, Mumbai",18.922,72.8347,₹₹,"[""Biryani"", ""North Indian"", ""Kebabs"", ""Mughlai"", ""Beverages"", ""Desserts""]",2026-06-08T15:59:26.615065
+swiggy,LunchBox - Meals and Thalis,swiggy_253219,Mumbai,Sant Nivas,"S B S Road, Mumbai",18.922,72.8347,₹,"[""Thalis"", ""North Indian"", ""Biryani"", ""South Indian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:26.615327
+swiggy,Truth Bowl,swiggy_1053927,Mumbai,Sant Nivas,"S B S Road, Mumbai",18.922,72.8347,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:59:26.615581
+swiggy,La Pino'z Pizza,swiggy_986870,Mumbai,Fort,"Fort, Mumbai",18.922,72.8347,₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T15:59:26.615873
+swiggy,Thalaiva Biryani,swiggy_1030911,Mumbai,Sant Nivas,"S B S Road, Mumbai",18.922,72.8347,₹₹,"[""Biryani"", ""Mughlai"", ""Lucknowi"", ""Hyderabadi"", ""Kebabs"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:26.616159
+swiggy,Dabba & Co.,swiggy_1054275,Mumbai,Sant Nivas,"S B S Road, Mumbai",18.922,72.8347,₹,"[""Home food"", ""Indian"", ""Thalis""]",2026-06-08T15:59:26.616449
+swiggy,Deliure & The Eatrium,swiggy_1208361,Mumbai,Fort Colaba,"Fort Colaba, Mumbai",18.922,72.8347,₹₹,"[""Desserts"", ""Chaat"", ""Bakery"", ""Snacks""]",2026-06-08T15:59:26.616741
+swiggy,Pizza Hut,swiggy_528949,Mumbai,Bandra West,"Khar West, Mumbai",19.0596,72.8295,₹₹,"[""Pizzas""]",2026-06-08T15:59:33.112262
+swiggy,KFC,swiggy_16051,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:59:33.113080
+swiggy,Burger King,swiggy_656188,Mumbai,Bandra west,"Station Road, Mumbai",19.0596,72.8295,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:59:33.113762
+swiggy,Domino's Pizza,swiggy_24525,Mumbai,Khar West,"Shrirang Apartment, Mumbai",19.0596,72.8295,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:59:33.114503
+swiggy,Theobroma,swiggy_378292,Mumbai,Pali Hill,"Pali Hil, Mumbai",19.0596,72.8295,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:33.115128
+swiggy,Natural Ice Cream,swiggy_30891,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:33.115780
+swiggy,The Belgian Waffle Co.,swiggy_60865,Mumbai,Bandra West,"Hill Road, Mumbai",19.0596,72.8295,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T15:59:33.116476
+swiggy,Magnolia Bakery,swiggy_799856,Mumbai,Bandra West,"Panchasheel Nagar, Mumbai",19.0596,72.8295,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:33.117092
+swiggy,House of Mandarin,swiggy_46318,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹₹,"[""Chinese"", ""Sushi"", ""Asian"", ""Japanese"", ""Seafood""]",2026-06-08T15:59:33.117718
+swiggy,Gustoso,swiggy_158168,Mumbai,Khar,"Bandra West, Mumbai",19.0596,72.8295,₹₹₹,"[""Italian""]",2026-06-08T15:59:33.118408
+swiggy,Bombay Salad Co,swiggy_278282,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹₹,"[""Salads"", ""healthy"", ""Coffee"", ""Beverages""]",2026-06-08T15:59:33.119039
+swiggy,Good Flippin' Burgers,swiggy_170435,Mumbai,Bandra West,"Pali Hill, Mumbai",19.0596,72.8295,₹₹,"[""Burgers"", ""American"", ""Fast Food"", ""Beverages""]",2026-06-08T15:59:33.119658
+swiggy,Charcoal Eats - Biryani & Beyond,swiggy_334236,Mumbai,4th Road Railway Station,"Khar West, Mumbai",19.0596,72.8295,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Mughlai""]",2026-06-08T15:59:33.120645
+swiggy,Harvest Salad Co,swiggy_502463,Mumbai,Bandra Linking Road,"Bandra Linking Road, Mumbai",19.0596,72.8295,₹₹₹,"[""Salads"", ""Healthy Food"", ""Snacks""]",2026-06-08T15:59:33.121307
+swiggy,Bakingo-Cakes & Desserts,swiggy_600670,Mumbai,Bandra West,"Linking Road, Mumbai",19.0596,72.8295,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:59:33.121801
+swiggy,McDonald's,swiggy_30243,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:59:33.122208
+swiggy,Subway,swiggy_31774,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:33.122581
+swiggy,Ray's Cafe and Pizzeria,swiggy_7334,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹₹,"[""Italian"", ""American""]",2026-06-08T15:59:33.123008
+swiggy,Cheesecake & Co.,swiggy_745634,Mumbai,Bandra West,"Viraj Towers, Mumbai",19.0596,72.8295,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:33.123406
+swiggy,145 Bandra,swiggy_26584,Mumbai,Bandra West,"Bandra West, Mumbai",19.0596,72.8295,₹₹₹,"[""Continental"", ""Indian"", ""Asian""]",2026-06-08T15:59:33.123847
+swiggy,Barbeque Nation,swiggy_877972,Mumbai,Agarwal Market,"Monghibai road, Mumbai",19.0596,72.8295,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:59:33.124277
+swiggy,Seoul Burgers & Shakes,swiggy_1372852,Mumbai,Carter Road,"KHAR WEST, Mumbai",19.0596,72.8295,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:59:33.124810
+swiggy,Truth Bowl,swiggy_1053947,Mumbai,Patkar Blocks,"Turner Road, Mumbai",19.0596,72.8295,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:59:33.125311
+swiggy,Protein Chef,swiggy_812724,Mumbai,Scruz Bandra East,"Khernagar, Mumbai",19.0596,72.8295,₹₹,"[""Healthy Food"", ""North Indian"", ""Continental""]",2026-06-08T15:59:33.125818
+swiggy,Pizza Hut,swiggy_39676,Mumbai,Powai,"Powai, Mumbai",19.1197,72.9051,₹₹,"[""Pastas""]",2026-06-08T15:59:40.307683
+swiggy,KFC,swiggy_7012,Mumbai,Powai,"Powai, Mumbai",19.1197,72.9051,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:59:40.308079
+swiggy,Burger King,swiggy_19972,Mumbai,Ghatkopar West,"Rcity, Mumbai",19.1197,72.9051,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:59:40.308433
+swiggy,Theobroma,swiggy_693079,Mumbai,Powai,"Powai, Mumbai",19.1197,72.9051,₹₹,"[""Desserts""]",2026-06-08T15:59:40.308781
+swiggy,Bakingo-Cakes & Desserts,swiggy_578577,Mumbai,IIT main gate Powai,"Powai, Mumbai",19.1197,72.9051,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:59:40.309130
+swiggy,McDonald's,swiggy_668678,Mumbai,Saki Vihar Powai,"ATL Corporate Park, Mumbai",19.1197,72.9051,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:59:40.309483
+swiggy,Subway,swiggy_31860,Mumbai,Powai,"Hiranandani Business Park, Powai, Mumbai",19.1197,72.9051,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:40.309845
+swiggy,Cheesecake & Co.,swiggy_812556,Mumbai,Powai,"Gokhale Nagar, Mumbai",19.1197,72.9051,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:40.310177
+swiggy,Salad Days,swiggy_815275,Mumbai,Powai,"VIP Road, Mumbai",19.1197,72.9051,₹₹,"[""Salads"", ""Healthy Food"", ""Italian""]",2026-06-08T15:59:40.310504
+swiggy,Natural Ice Cream,swiggy_30908,Mumbai,Powai,"Powai, Mumbai",19.1197,72.9051,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:40.310912
+swiggy,The Belgian Waffle Co.,swiggy_636524,Mumbai,POWAI,"HIRANANDANI GARDENS, Mumbai",19.1197,72.9051,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:59:40.311285
+swiggy,La Pino'z Pizza,swiggy_731683,Mumbai,"Shankaracharya Marg,Powai Mumbai","Rambaugh, Mumbai",19.1197,72.9051,₹₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T15:59:40.311701
+swiggy,Grameen Kulfi,swiggy_351110,Mumbai,Powai,"IIT market, Mumbai",19.1197,72.9051,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:40.312068
+swiggy,Mia Cucina,swiggy_4954,Mumbai,Powai ,"Powai , Mumbai",19.1197,72.9051,₹₹₹,"[""Italian"", ""Pizzas"", ""Pastas""]",2026-06-08T15:59:40.312493
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576016,Mumbai,Powai,"VEER SAVARKAR ROAD, Mumbai",19.1197,72.9051,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:59:40.312966
+swiggy,Mantra Dinning Bar,swiggy_296322,Mumbai,Powai,"Powai, Mumbai",19.1197,72.9051,₹₹₹,"[""Indian"", ""Chinese"", ""Desserts""]",2026-06-08T15:59:40.313312
+swiggy,Elementaria Bakery & Cafe,swiggy_110091,Mumbai,Powai,"Powai, Mumbai",19.1197,72.9051,₹₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T15:59:40.313773
+swiggy,Joshh - Indian Street Eats,swiggy_462162,Mumbai,Powai," Central Ave, Mumbai",19.1197,72.9051,₹,"[""Indian"", ""North Indian"", ""South Indian"", ""Thalis"", ""Ice Cream"", ""Snacks"", ""Street Food"", ""Chaat"", ""Desserts""]",2026-06-08T15:59:40.314188
+swiggy,Nothing But Chicken,swiggy_66905,Mumbai,Powai,"Hiranandani, Mumbai",19.1197,72.9051,₹₹,"[""Salads"", ""Biryani"", ""Kebabs"", ""Fast Food"", ""Healthy Food""]",2026-06-08T15:59:40.314679
+swiggy,Bombay Sweet Shop,swiggy_621758,Mumbai,Powai,"HMPL Surya Nagar, Mumbai",19.1197,72.9051,₹₹₹,"[""Sweets"", ""Desserts"", ""Snacks""]",2026-06-08T15:59:40.315065
+swiggy,Seoul Burgers & Shakes,swiggy_920966,Mumbai,EKTA NAGAR POWAI,"IIT MARKET, Mumbai",19.1197,72.9051,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:59:40.315434
+swiggy,Truth Bowl,swiggy_1053817,Mumbai,Vikhroli West,"Veer Sawarkar Marg, Mumbai",19.1197,72.9051,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:59:40.315811
+swiggy,Gaurav Sweets and Namkeen,swiggy_380931,Mumbai,Powai,"Hiranandani Gardens, Mumbai",19.1197,72.9051,₹,"[""Sweets"", ""Snacks"", ""Chaat""]",2026-06-08T15:59:40.316151
+swiggy,Protein Chef,swiggy_1255172,Mumbai,Powai,"Ekta Nagar Society, Mumbai",19.1197,72.9051,₹₹,"[""Healthy Food"", ""North Indian"", ""sandwich""]",2026-06-08T15:59:40.316496
+swiggy,"Pizza Hut | Kohinoor Sqaure Dadar, Mumbai",swiggy_421565,Mumbai,Dadar West,"Dadar West, Mumbai",19.0178,72.8478,₹₹,"[""Pizzas""]",2026-06-08T15:59:47.843792
+swiggy,Burger King,swiggy_8249,Mumbai,Mahim,"Dadar West, Mumbai",19.0178,72.8478,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:59:47.844871
+swiggy,Domino's Pizza,swiggy_331762,Mumbai,Wadala,"ISSARDAS, WADALA, Mumbai",19.0178,72.8478,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:59:47.845783
+swiggy,Theobroma,swiggy_137366,Mumbai,Matunga East,"Matunga East, Mumbai",19.0178,72.8478,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:47.846595
+swiggy,Subway,swiggy_595682,Mumbai,Matunga,"Gani Mansion, Mumbai",19.0178,72.8478,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:47.847246
+swiggy,Natural Ice Cream,swiggy_30895,Mumbai,Parel,"Parel TT, Mumbai",19.0178,72.8478,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:47.847921
+swiggy,The Belgian Waffle Co.,swiggy_27089,Mumbai,Matunga,"Matunga East, Mumbai",19.0178,72.8478,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:59:47.848559
+swiggy,Gypsy Corner,swiggy_13151,Mumbai,Dadar West,"Dadar West, Mumbai",19.0178,72.8478,₹₹,"[""Maharashtrian"", ""Fast Food""]",2026-06-08T15:59:47.849210
+swiggy,La Pino'z Pizza,swiggy_337815,Mumbai,Matunga East,"Matunga East, Mumbai",19.0178,72.8478,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T15:59:47.849850
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576012,Mumbai,Sion,"RAJENDRA PRASAD NAGAR, Mumbai",19.0178,72.8478,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:59:47.850464
+swiggy,Grameen Kulfi,swiggy_351134,Mumbai,wadala,"R.A.K Road, Mumbai",19.0178,72.8478,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:47.851088
+swiggy,Charcoal Eats - Biryani & Beyond,swiggy_7135,Mumbai,Dadar East,"Dadar East, Mumbai",19.0178,72.8478,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Mughlai""]",2026-06-08T15:59:47.851650
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_6968,Mumbai,Matunga East,"Matunga East, Mumbai",19.0178,72.8478,₹,"[""Desserts"", ""Ice Cream""]",2026-06-08T15:59:47.852263
+swiggy,NIC Ice Creams,swiggy_337356,Mumbai,wadala,"R.A.K Road, Mumbai",19.0178,72.8478,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:47.852858
+swiggy,Jumboking Burgers,swiggy_42278,Mumbai,Dadar,"ranade road, Mumbai",19.0178,72.8478,₹,"[""Burgers"", ""American"", ""Beverages""]",2026-06-08T15:59:47.853440
+swiggy,The Pizza Project by Oven Story,swiggy_837820,Mumbai,Dadar East,"Near Premier Cinema , Parel(E), Mumbai",19.0178,72.8478,₹₹,"[""Pizzas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:47.854062
+swiggy,Nino Burgers,swiggy_652310,Mumbai,Dadar West,"Gokhale Road, Mumbai",19.0178,72.8478,₹₹,"[""Burgers"", ""American"", ""Fast Food"", ""Beverages""]",2026-06-08T15:59:47.854648
+swiggy,Francesco's Pizzeria,swiggy_654440,Mumbai,Dadar West,"Gokhale Road, Mumbai",19.0178,72.8478,₹₹,"[""Pizzas"", ""Pastas"", ""Italian"", ""Fast Food""]",2026-06-08T15:59:47.855276
+swiggy,Poetry By Love & Cheesecake,swiggy_602379,Mumbai,Matunga East,"Matunga East, Mumbai",19.0178,72.8478,₹₹₹,"[""Cakes & Pastries"", ""Desserts"", ""sandwich"", ""Cafe"", ""Continental"", ""Bakery"", ""Coffee"", ""Beverages""]",2026-06-08T15:59:47.855979
+swiggy,Arya Bhavan,swiggy_3292,Mumbai,Matunga,"Dadar West, Mumbai",19.0178,72.8478,₹₹,"[""South Indian""]",2026-06-08T15:59:47.856357
+swiggy,KFC,swiggy_613919,Mumbai,Dadar West,"Dadar West, Mumbai",19.0178,72.8478,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:59:47.856644
+swiggy,Barbeque Nation,swiggy_305823,Mumbai,Worli,"Worli, Mumbai",19.0178,72.8478,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:59:47.856912
+swiggy,Seoul Burgers & Shakes,swiggy_838675,Mumbai,Lower Parel,"Bhatankar Marg, Mumbai",19.0178,72.8478,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:59:47.857207
+swiggy,Truth Bowl,swiggy_1053746,Mumbai,Parel,"Near Premier Cinema, Mumbai",19.0178,72.8478,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:59:47.857470
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_1002524,Mumbai,Laxminarsingh Papan Marg,"Moses Road, Mumbai",19.0178,72.8478,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:59:47.857765
+swiggy,Pizza Hut,swiggy_514371,Mumbai,Sion,"Sion, Mumbai",19.033,72.8679,₹₹,"[""Pizzas""]",2026-06-08T15:59:56.427421
+swiggy,Domino's Pizza,swiggy_24527,Mumbai,Antop Hill,"Yashodham Mulund (E), Mumbai",19.033,72.8679,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:59:56.428087
+swiggy,Theobroma,swiggy_665543,Mumbai,Antop Hill,"Antop Hill, Mumbai",19.033,72.8679,₹₹,"[""Desserts""]",2026-06-08T15:59:56.428646
+swiggy,Natural Ice Cream,swiggy_30887,Mumbai,Matunga,"KINGCIRCLE, Mumbai",19.033,72.8679,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:59:56.429600
+swiggy,Subway,swiggy_657090,Mumbai,Dosti Wadala,"DOSTI SHOPPE LINK MALL, Mumbai",19.033,72.8679,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:59:56.430381
+swiggy,La Pino'z Pizza,swiggy_848523,Mumbai,Wadala,"Wadala, Mumbai",19.033,72.8679,₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T15:59:56.430964
+swiggy,The Pizza Project by Oven Story,swiggy_837768,Mumbai,Antop Hill,"Sm Road, Mumbai",19.033,72.8679,₹₹,"[""Pizzas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:56.431542
+swiggy,Jumboking Burgers,swiggy_209708,Mumbai,Sion,"Transist Camp Road Sion West, Mumbai",19.033,72.8679,₹,"[""Burgers"", ""American"", ""Beverages""]",2026-06-08T15:59:56.432453
+swiggy,Sweet County Cake Shop,swiggy_568242,Mumbai,Sion,"Sion, Mumbai",19.033,72.8679,₹₹,"[""Bakery"", ""Cakes & Pastries"", ""Desserts"", ""Cakes""]",2026-06-08T15:59:56.433677
+swiggy,Veg Meals By LunchBox,swiggy_263645,Mumbai,Antop Hill,"S.M Road, Mumbai",19.033,72.8679,₹,"[""Thalis"", ""North Indian"", ""Biryani"", ""South Indian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:56.434291
+swiggy,Veg Darbar by Behrouz Biryani,swiggy_574921,Mumbai,Antop Hill,"S.M Road, Mumbai",19.033,72.8679,₹₹₹,"[""Biryani"", ""North Indian"", ""Kebabs"", ""Mughlai"", ""Beverages"", ""Desserts""]",2026-06-08T15:59:56.434818
+swiggy,Faasos Signature Wraps & Rolls,swiggy_566151,Mumbai,Antop Hill,"S.M Road, Mumbai",19.033,72.8679,₹₹,"[""Fast Food"", ""Snacks"", ""North Indian"", ""Desserts"", ""Beverages""]",2026-06-08T15:59:56.435250
+swiggy,Makhani Darbar,swiggy_801229,Mumbai,S.M Road,"Wadala, Mumbai",19.033,72.8679,₹₹,"[""Biryani"", ""North Indian"", ""Kebabs"", ""Mughlai"", ""Beverages"", ""Desserts""]",2026-06-08T15:59:56.435877
+swiggy,"The Dessert Heaven - Pastry, Brownie and Cakes",swiggy_729167,Mumbai,Matunga Wadala,"Kalpak estate, Mumbai",19.033,72.8679,₹,"[""Bakery"", ""Desserts"", ""Sweets"", ""Ice Cream""]",2026-06-08T15:59:56.436579
+swiggy,"Bhatti Chicken - Grilled, NOT Fried!",swiggy_616140,Mumbai,Antop,"Antop Hill, Mumbai",19.033,72.8679,₹,"[""North Indian"", ""Snacks"", ""Fast Food"", ""Tandoor""]",2026-06-08T15:59:56.437404
+swiggy,Meemee's Ice Creams & Desserts,swiggy_734074,Mumbai,Matunga Wadala,"Sion, Mumbai",19.033,72.8679,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:59:56.437820
+swiggy,Gourmet Ice Cream Cakes by Baskin Robbins,swiggy_416803,Mumbai,Wadala,"Wadala truck terminal, Mumbai",19.033,72.8679,₹,"[""Ice Cream Cakes"", ""Desserts"", ""Ice Cream"", ""Bakery""]",2026-06-08T15:59:56.438435
+swiggy,Truth Bowl,swiggy_1053737,Mumbai,Antop Hill,"S.M Road, Mumbai",19.033,72.8679,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:59:56.438769
+swiggy,KFC,swiggy_433401,Mumbai,Mulund West,"Mulund West, Mumbai",19.1663,72.95,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T16:00:05.208854
+swiggy,Pizza Hut,swiggy_10839,Mumbai,Mulund West,"LBS Marg, Mumbai",19.1663,72.95,₹₹,"[""Italian"", ""Pizzas""]",2026-06-08T16:00:05.209351
+swiggy,Domino's Pizza,swiggy_435821,Mumbai,RUNWAL GREENS,"Kurla, Mumbai",19.1663,72.95,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T16:00:05.209739
+swiggy,Burger King,swiggy_9648,Mumbai,Thane West,"Korum mall, Mumbai",19.1663,72.95,₹₹,"[""Burgers"", ""American""]",2026-06-08T16:00:05.210117
+swiggy,Theobroma,swiggy_334053,Mumbai,Mulund West,"Mulund West, Mumbai",19.1663,72.95,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T16:00:05.210506
+swiggy,Subway,swiggy_238032,Mumbai,Mulund Station,"SIDDHARTH NAGAR, Mumbai",19.1663,72.95,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T16:00:05.210845
+swiggy,Natural Ice Cream,swiggy_53465,Mumbai,Bhandup West,"Building1,LBS Marg, Bhandup West, Mumbai",19.1663,72.95,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:05.211243
+swiggy,Grameen Kulfi,swiggy_351122,Mumbai,Mulund West,"Neelkantha Nagar, Mumbai",19.1663,72.95,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:05.211590
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576009,Mumbai,Mulund,"Bandra Bus Turminus, Mumbai",19.1663,72.95,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T16:00:05.211946
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_738019,Mumbai,Mulund,"Madan Mohan Malviya Road, Mumbai",19.1663,72.95,₹,"[""Desserts"", ""Ice Cream""]",2026-06-08T16:00:05.212378
+swiggy,NIC Ice Creams,swiggy_114776,Mumbai,Mulund West,"Neelkantha Nagar, Mumbai",19.1663,72.95,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:05.212751
+swiggy,Nothing But Chicken,swiggy_282471,Mumbai,Mulund East,"Naghar Road, Mumbai",19.1663,72.95,₹₹,"[""Salads"", ""Biryani"", ""Kebabs"", ""Fast Food"", ""Healthy Food""]",2026-06-08T16:00:05.213102
+swiggy,Thambbi,swiggy_11238,Mumbai,Mulund West,"Mulund West, Mumbai",19.1663,72.95,₹₹,"[""South Indian"", ""Punjabi"", ""Snacks"", ""Thalis""]",2026-06-08T16:00:05.213458
+swiggy,Shiv Sagar Veg Restaurant,swiggy_50050,Mumbai,Mulund West,"Vardhman Nagar, Mulund West, Mumbai",19.1663,72.95,₹₹,"[""South Indian"", ""Indian"", ""Chinese"", ""Continental"", ""Beverages"", ""Mexican"", ""Desserts"", ""Chaat"", ""Italian"", ""North Indian""]",2026-06-08T16:00:05.213796
+swiggy,FNP Cakes By Ferns N Petals,swiggy_698605,Mumbai,Mulund West,"Bhandup Village Rd, Mumbai",19.1663,72.95,₹₹,"[""Desserts"", ""Bakery"", ""Sweets"", ""Ice Cream"", ""Beverages"", ""North Indian"", ""Chinese""]",2026-06-08T16:00:05.214128
+swiggy,1441 Pizzeria,swiggy_361727,Mumbai,Bhandup West,"Bhandup West, Mumbai",19.1663,72.95,₹₹,"[""Italian"", ""Pizzas"", ""Pastas""]",2026-06-08T16:00:05.214502
+swiggy,Blue Tokai Coffee Roasters,swiggy_816322,Mumbai,Mulund West,"Goregaon Link Rd, Mumbai",19.1663,72.95,₹₹,"[""Cafe"", ""Coffee"", ""Beverages""]",2026-06-08T16:00:05.214841
+swiggy,Madno - House of Sundaes and Waffles,swiggy_611599,Mumbai,Mulund CK,"Next to fortis hospitals, Mumbai",19.1663,72.95,₹,"[""Ice Cream"", ""Desserts"", ""Waffle""]",2026-06-08T16:00:05.215749
+swiggy,Monginis Cake Shop,swiggy_272058,Mumbai,Mulund West,"Veena Nagar, Mumbai",19.1663,72.95,₹₹,"[""Cakes & Pastries"", ""Bakery"", ""Desserts""]",2026-06-08T16:00:05.216544
+swiggy,Suchali's Artisan Bakehouse,swiggy_819953,Mumbai,Mulund,"Mulund, Mumbai",19.1663,72.95,₹₹,"[""Bakery"", ""Desserts"", ""Beverages""]",2026-06-08T16:00:05.217197
+swiggy,Barbeque Nation,swiggy_305814,Mumbai,MUM-KORUM MALL,"Eastern Express Hwy, Mumbai",19.1663,72.95,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T16:00:05.217810
+swiggy,Burger King,swiggy_918883,Mumbai,Mulund West,"Marathon Maxima, Mumbai",19.1663,72.95,₹,"[""Burgers"", ""American""]",2026-06-08T16:00:05.218354
+swiggy,Gaurav Sweets and Namkeen,swiggy_1104827,Mumbai,Mulund,"Mulund, Mumbai",19.1663,72.95,₹₹,"[""Chaat"", ""Indian"", ""Sweets"", ""Snacks"", ""Fast Food""]",2026-06-08T16:00:05.218975
+swiggy,Protein Chef,swiggy_884675,Mumbai,Mulund,"TMC Office, Mumbai",19.1663,72.95,₹₹,"[""Continental"", ""Healthy Food""]",2026-06-08T16:00:05.219514
+swiggy,Hot Chips,swiggy_547462,Mumbai,Airoli,"Thane Zone-2, Mumbai",19.1663,72.95,₹₹,"[""Snacks"", ""Sweets""]",2026-06-08T16:00:05.220215
+swiggy,KFC,swiggy_508471,Mumbai,Lower Parel,"Lower Parel, Mumbai",18.9941,72.8261,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T16:00:14.030022
+swiggy,Burger King,swiggy_683310,Mumbai,Lower Parel West,"Matulya Centre, Mumbai",18.9941,72.8261,₹₹,"[""Burgers"", ""American""]",2026-06-08T16:00:14.030553
+swiggy,Theobroma,swiggy_19008,Mumbai,Lower Parel,"Lower Parel, Mumbai",18.9941,72.8261,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T16:00:14.031042
+swiggy,Subway,swiggy_853379,Mumbai,OWC (One world centre),"JUPITER TEXTILE MILLS, Mumbai",18.9941,72.8261,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T16:00:14.031446
+swiggy,McDonald's,swiggy_564273,Mumbai,Lower Parel,"Lower Parel, Mumbai",18.9941,72.8261,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T16:00:14.031834
+swiggy,Natural Ice Cream,swiggy_27805,Mumbai,Worli,"Lower_Parel_Worli, Mumbai",18.9941,72.8261,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:14.032198
+swiggy,Harvest Salad Co,swiggy_573554,Mumbai,Lower Parel,"Inside Sun Mill Compound, Mumbai",18.9941,72.8261,₹₹₹,"[""Salads"", ""Healthy Food"", ""Snacks""]",2026-06-08T16:00:14.032571
+swiggy,The Belgian Waffle Co.,swiggy_90864,Mumbai,Lower Parel,"Lower Parel, Mumbai",18.9941,72.8261,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T16:00:14.032921
+swiggy,Bakingo-Cakes & Desserts,swiggy_597743,Mumbai,Dreamland Cinema,"Lamington road, Mumbai",18.9941,72.8261,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T16:00:14.033274
+swiggy,La Pino'z Pizza,swiggy_767730,Mumbai,Senapati Bapat Marg,"Lodha Park, Mumbai",18.9941,72.8261,₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T16:00:14.033622
+swiggy,The Pizza Project by Oven Story,swiggy_837802,Mumbai,Lower Parel Worli,"Hawabhai Complex, Mumbai",18.9941,72.8261,₹₹,"[""Pizzas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T16:00:14.034078
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576037,Mumbai,Dadar,"Park Apartment, Mumbai",18.9941,72.8261,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T16:00:14.034564
+swiggy,Grameen Kulfi,swiggy_351119,Mumbai,Lower Parel,"DELISLE ROAD, Mumbai",18.9941,72.8261,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:14.034939
+swiggy,Cheesecake & Co.,swiggy_812555,Mumbai,Byculla,"N M Joshi Marg, Mumbai",18.9941,72.8261,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T16:00:14.035285
+swiggy,Charcoal Eats - Biryani & Beyond,swiggy_7134,Mumbai,Shriniwas Tower,"Lower Parel, Mumbai",18.9941,72.8261,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Mughlai""]",2026-06-08T16:00:14.035682
+swiggy,Maiz Mexican Kitchen,swiggy_829295,Mumbai,Lower Parel Worli,"Lower Parel, Mumbai",18.9941,72.8261,₹₹₹,"[""Mexican""]",2026-06-08T16:00:14.036035
+swiggy,Goila Butter Chicken,swiggy_874838,Mumbai,LOWER PAREL,"DHANRAJ MILLS, Mumbai",18.9941,72.8261,₹₹,"[""Biryani"", ""Kebabs"", ""Desserts""]",2026-06-08T16:00:14.036361
+swiggy,Salad Days,swiggy_903894,Mumbai,Lower Parel Worli,"Dhanraj Mill Compound, Mumbai",18.9941,72.8261,₹₹,"[""Salads""]",2026-06-08T16:00:14.036725
+swiggy,Truth Bowl,swiggy_1053691,Mumbai,Lower Parel Worli,"Dr E Moses road, Mumbai",18.9941,72.8261,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T16:00:14.037097
+swiggy,Protein Chef,swiggy_809652,Mumbai,Lower Parel Worli,"Shop No 11, Mumbai",18.9941,72.8261,₹₹,"[""Indian"", ""Fast Food"", ""Snacks""]",2026-06-08T16:00:14.037523
+swiggy,KFC,swiggy_369088,Mumbai,Thane West,"Thane West, Mumbai",19.2183,72.9781,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T16:00:22.207797
+swiggy,Pizza Hut,swiggy_27414,Mumbai,Thane West,"Thane West, Mumbai",19.2183,72.9781,₹₹,"[""Pizzas""]",2026-06-08T16:00:22.208302
+swiggy,Burger King,swiggy_221810,Mumbai,Thane West,"Lake City Mall, Mumbai",19.2183,72.9781,₹₹,"[""Burgers"", ""American""]",2026-06-08T16:00:22.208711
+swiggy,Theobroma,swiggy_47606,Mumbai,Thane West,"Thane West, Mumbai",19.2183,72.9781,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T16:00:22.209271
+swiggy,Natural Ice Cream,swiggy_31981,Mumbai,Thane West,"Next to Cinemax, Mumbai",19.2183,72.9781,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:22.209757
+swiggy,Bakingo-Cakes & Desserts,swiggy_578579,Mumbai,Uthalsar,"Dr Mascarenhas Road, Mumbai",19.2183,72.9781,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T16:00:22.210144
+swiggy,Subway,swiggy_31779,Mumbai,LAKE SHORE MALL,"Eastern Express Highway, Near Jupiter Hospital, Majiwada, Thane West, Mumbai",19.2183,72.9781,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T16:00:22.210486
+swiggy,McDonald's,swiggy_23743,Mumbai,Thane,"Rmall, Mumbai",19.2183,72.9781,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T16:00:22.210822
+swiggy,The Belgian Waffle Co.,swiggy_710826,Mumbai,THANE KAPURBAWDI JUNTION,"LAKE CITY MALL, Mumbai",19.2183,72.9781,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T16:00:22.211132
+swiggy,Charcoal Eats - Biryani & Beyond,swiggy_328883,Mumbai,Sandozbaugh,"TAHNE WEST, Mumbai",19.2183,72.9781,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Mughlai""]",2026-06-08T16:00:22.211422
+swiggy,La Pino'z Pizza,swiggy_803407,Mumbai,Ganu Gurav Chawl,"Kolshet Road, Mumbai",19.2183,72.9781,₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Mexican"", ""Desserts"", ""Beverages"", ""Snacks"", ""Combos"", ""Fast Food""]",2026-06-08T16:00:22.211674
+swiggy,Grameen Kulfi,swiggy_351118,Mumbai,Thane West,"Pokhran Road, Mumbai",19.2183,72.9781,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:22.211919
+swiggy,Go Zero Ice Creams & Desserts,swiggy_576026,Mumbai,Hiranandani Estate,"Vartaknagar Manpada Zone, Mumbai",19.2183,72.9781,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T16:00:22.212216
+swiggy,Chimichurri - The Asian Kitchen,swiggy_559878,Mumbai,Thane West,"R Mall Thane, Mumbai",19.2183,72.9781,₹₹₹,"[""Asian"", ""Japanese""]",2026-06-08T16:00:22.212546
+swiggy,NIC Ice Creams,swiggy_91287,Mumbai,Thane West,"Pokhran Road, Mumbai",19.2183,72.9781,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T16:00:22.212861
+swiggy,BOX8 - Desi Meals,swiggy_289331,Mumbai,Thane West,"haria industrial estate, Mumbai",19.2183,72.9781,₹,"[""North Indian"", ""Biryani"", ""Thalis"", ""Home Food""]",2026-06-08T16:00:22.213150
+swiggy,The Boston Cafe & Patisserie,swiggy_375850,Mumbai,Thane West,"Thane West, Mumbai",19.2183,72.9781,₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T16:00:22.213465
+swiggy,Swamy - South Indian Food Express,swiggy_63802,Mumbai,Thane West,"Vasant Vihar, Thane West, Mumbai",19.2183,72.9781,₹,"[""South Indian"", ""Indian""]",2026-06-08T16:00:22.213794
+swiggy,1441 Pizzeria,swiggy_50483,Mumbai,Thane West,"Thane West, Mumbai",19.2183,72.9781,₹₹,"[""Italian"", ""Pizzas"", ""Pastas""]",2026-06-08T16:00:22.214117
+swiggy,China Bistro,swiggy_12349,Mumbai,Thane West,"Thane West, Mumbai",19.2183,72.9781,₹₹₹,"[""Chinese"", ""Asian"", ""Pan-Asian"", ""Sushi"", ""Japanese"", ""Korean"", ""Thai"", ""Desserts""]",2026-06-08T16:00:22.214445
+swiggy,Seoul Burgers & Shakes,swiggy_1181681,Mumbai,WAGBIL ROAD,"KAVESAR, Mumbai",19.2183,72.9781,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T16:00:22.214715
+swiggy,Truth Bowl,swiggy_1053833,Mumbai,Thane West,"Azad Nagar, Mumbai",19.2183,72.9781,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T16:00:22.214992
+swiggy,Gaurav Sweets and Namkeen,swiggy_379825,Mumbai,Dhokali,"Wing 1, Mumbai",19.2183,72.9781,₹,"[""Chaat"", ""Sweets"", ""Snacks""]",2026-06-08T16:00:22.215272

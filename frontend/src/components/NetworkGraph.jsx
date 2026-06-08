@@ -9,8 +9,8 @@ const CITIES = [
   'Pune', 'Kolkata', 'Ahmedabad', 'Jaipur', 'Lucknow'
 ];
 
-export default function NetworkGraph() {
-  const [selectedCity, setSelectedCity] = useState('Bengaluru');
+export default function NetworkGraph({ selectedCity: propSelectedCity }) {
+  const [selectedCity, setSelectedCity] = useState(propSelectedCity || 'Bengaluru');
   const [minComponentSize, setMinComponentSize] = useState(2);
   const [edgeTypeFilter, setEdgeTypeFilter] = useState('all'); // 'all', 'shared_address', 'shared_license'
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,6 +25,13 @@ export default function NetworkGraph() {
   
   const svgRef = useRef(null);
   const simulationRef = useRef(null);
+
+  // Sync prop to local state
+  useEffect(() => {
+    if (propSelectedCity) {
+      setSelectedCity(propSelectedCity);
+    }
+  }, [propSelectedCity]);
 
   // Fetch graph edges when city changes
   useEffect(() => {

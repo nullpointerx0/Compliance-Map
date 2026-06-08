@@ -1,0 +1,211 @@
+platform,brand_name,url_slug,city,zone,address,latitude,longitude,price_range,cuisine_tags,scraped_at
+swiggy,Barbeque Nation,swiggy_293095,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:29:57.309232
+swiggy,KFC,swiggy_671928,Bengaluru,Koramangala,"7th Block, Bengaluru",12.9352,77.6245,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:29:57.309657
+swiggy,Pizza Hut,swiggy_10576,Bengaluru,Koramangala,"6th Block, Bengaluru",12.9352,77.6245,₹₹,"[""Pizzas""]",2026-06-08T15:29:57.309943
+swiggy,Nandhana Palace,swiggy_18973,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹₹,"[""Biryani"", ""Andhra"", ""South Indian"", ""North Indian""]",2026-06-08T15:29:57.310215
+swiggy,Homely,swiggy_65075,Bengaluru,Koramangala,"6th Block, Bengaluru",12.9352,77.6245,₹,"[""Home Food"", ""South Indian"", ""Beverages"", ""Desserts"", ""Thalis""]",2026-06-08T15:29:57.310493
+swiggy,Seoul Burgers & Shakes,swiggy_739118,Bengaluru,Koramangala,"Industrial Layout ward, Bengaluru",12.9352,77.6245,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:29:57.310765
+swiggy,Burger King,swiggy_5934,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:29:57.311027
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_8736,Bengaluru,Koramangala,"100 Ft intermediate Ring Road, Bengaluru",12.9352,77.6245,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:29:57.311318
+swiggy,Bakingo,swiggy_590119,Bengaluru,BTM Layout,"1st  Stage, Bengaluru",12.9352,77.6245,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:29:57.311591
+swiggy,Goila Butter Chicken,swiggy_588791,Bengaluru,Koramangala,"CLUB ROAD, Bengaluru",12.9352,77.6245,₹₹,"[""North Indian"", ""Biryani"", ""Kebabs"", ""Desserts""]",2026-06-08T15:29:57.311842
+swiggy,Popeyes,swiggy_667571,Bengaluru,Koramangala,"Koramangala , Bengaluru",12.9352,77.6245,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:29:57.312088
+swiggy,California Burrito,swiggy_10820,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹,"[""Mexican"", ""American"", ""Salads"", ""Continental"", ""Keto"", ""Healthy Food"", ""Beverages"", ""Snacks"", ""Desserts"", ""Fast Food""]",2026-06-08T15:29:57.312343
+swiggy,Cheesecake & Co.,swiggy_534235,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹,"[""Bakery""]",2026-06-08T15:29:57.312603
+swiggy,Louis Burger,swiggy_506324,Bengaluru,Koramangala,"6Th Block, Koramangala, Bengaluru",12.9352,77.6245,₹₹,"[""Burgers"", ""American"", ""Fast Food""]",2026-06-08T15:29:57.312860
+swiggy,McDonald's,swiggy_23678,Bengaluru,Koramangala,"5th Block, Bengaluru",12.9352,77.6245,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:29:57.313137
+swiggy,Subway,swiggy_656392,Bengaluru,Koramangala,"1st Block, Bengaluru",12.9352,77.6245,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:29:57.313392
+swiggy,Natural Ice Cream,swiggy_27811,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:29:57.313641
+swiggy,Theobroma,swiggy_426776,Bengaluru,Koramangala,"Koramangala, Bengaluru",12.9352,77.6245,₹₹,"[""Desserts"", ""Bakery"", ""Beverages""]",2026-06-08T15:29:57.313900
+swiggy,The Belgian Waffle Co.,swiggy_621512,Bengaluru,Koramangala,"K.H.B Colony, Bengaluru",12.9352,77.6245,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:29:57.314145
+swiggy,Moplah's,swiggy_596862,Bengaluru,Koramangala,"BTM Layout, Bengaluru",12.9352,77.6245,₹₹₹,"[""Kerala"", ""Biryani"", ""Seafood"", ""Beverages"", ""Ice Cream"", ""Desserts""]",2026-06-08T15:29:57.314386
+swiggy,Truth Bowl,swiggy_1053783,Bengaluru,HSR Layout,"Jakkasandra, Bengaluru",12.9352,77.6245,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:29:57.314628
+swiggy,KFC,swiggy_588619,Bengaluru,Central Bangalore,"Brigade Road, Bengaluru",12.9716,77.5946,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:05.463938
+swiggy,Pizza Hut,swiggy_10575,Bengaluru,Central Bangalore,"Richmond Town, Bengaluru",12.9716,77.5946,₹₹,"[""Pizzas""]",2026-06-08T15:30:05.464312
+swiggy,Burger King,swiggy_5938,Bengaluru,Central Bangalore,"Tasker Town, Bengaluru",12.9716,77.5946,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:05.464622
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_9104,Bengaluru,Central Bangalore,"Ali Asker Road, Bengaluru",12.9716,77.5946,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:30:05.464892
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_59146,Bengaluru,Central Bangalore,"Austin town, Bengaluru",12.9716,77.5946,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:05.465143
+swiggy,Paris Panini - Gourmet Sandwiches & Wraps,swiggy_667962,Bengaluru,Central Bangalore,"Church Street, Bengaluru",12.9716,77.5946,₹₹,"[""sandwich"", ""wrap"", ""Fast Food"", ""Pastas"", ""Italian"", ""Salads"", ""Healthy Food"", ""Desserts"", ""Continental""]",2026-06-08T15:30:05.465381
+swiggy,Bakingo,swiggy_570511,Bengaluru,Central Bangalore,"Bangalore South, Bengaluru",12.9716,77.5946,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:05.465619
+swiggy,Subway,swiggy_672074,Bengaluru,Whitefield,"Ashok Nagar, Bengaluru",12.9716,77.5946,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:30:05.465871
+swiggy,A2B - Adyar Ananda Bhavan,swiggy_12808,Bengaluru,Shanti Nagar,"Shanti Nagar, Bengaluru",12.9716,77.5946,₹₹,"[""South Indian"", ""North Indian"", ""Sweets"", ""Chinese""]",2026-06-08T15:30:05.466116
+swiggy,Theobroma,swiggy_426730,Bengaluru,Central Bangalore,"Vittal Mallya Road, Bengaluru",12.9716,77.5946,₹₹,"[""Desserts"", ""Bakery"", ""Beverages""]",2026-06-08T15:30:05.466404
+swiggy,Natural Ice Cream,swiggy_29673,Bengaluru,Central Bangalore,"St. Marks Road, Bengaluru",12.9716,77.5946,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:05.466660
+swiggy,McDonald's,swiggy_43836,Bengaluru,Central Bangalore,"MG Road, Bengaluru",12.9716,77.5946,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:05.466895
+swiggy,Glen's Bakehouse,swiggy_17376,Bengaluru,Central Bangalore,"Lavelle Road, Bengaluru",12.9716,77.5946,₹₹,"[""Desserts"", ""Bakery"", ""Beverages"", ""Continental"", ""Italian""]",2026-06-08T15:30:05.467127
+swiggy,Go Native,swiggy_219460,Bengaluru,Central Bangalore,"Ashok Nagar, Bengaluru",12.9716,77.5946,₹₹,"[""Healthy Food"", ""Pizzas"", ""briyani""]",2026-06-08T15:30:05.467376
+swiggy,Amadora Gourmet Ice Cream,swiggy_737841,Bengaluru,Central Bangalore,"u b city, Bengaluru",12.9716,77.5946,₹₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:05.467611
+swiggy,Toscano's Crafted Cakes and Desserts,swiggy_347256,Bengaluru,Central Bangalore,"Vittal Malya Road, Bengaluru",12.9716,77.5946,₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T15:30:05.467839
+swiggy,Salt - Indian Restaurant Bar & Grill,swiggy_484939,Bengaluru,Central Bangalore,"CENTRAL BANGALORE, Bengaluru",12.9716,77.5946,₹₹₹,"[""North Indian"", ""Kebabs"", ""Tandoori"", ""Biryani"", ""Thalis""]",2026-06-08T15:30:05.468063
+swiggy,Sweet Chariot,swiggy_58568,Bengaluru,Central Bangalore,"Brigade Road, Bengaluru",12.9716,77.5946,₹,"[""Desserts""]",2026-06-08T15:30:05.468283
+swiggy,Wow! China,swiggy_264240,Bengaluru,Church Street,"Church Street, Bengaluru",12.9716,77.5946,₹₹,"[""Chinese"", ""Asian"", ""fastfood"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:05.468876
+swiggy,"Bhatti Chicken - Grilled, NOT Fried!",swiggy_616273,Bengaluru,Central Bangalore,"Langford Road, Bengaluru",12.9716,77.5946,₹,"[""North Indian"", ""Snacks"", ""Fast Food"", ""Tandoor""]",2026-06-08T15:30:05.469169
+swiggy,Seoul Burgers & Shakes,swiggy_1194325,Bengaluru,Central Bangalore,"Ashok Nagar, Bengaluru",12.9716,77.5946,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:30:05.469435
+swiggy,Homely,swiggy_1344137,Bengaluru,Rajajinagar,"SR Nagar, Bengaluru",12.9716,77.5946,₹,"[""South Indian"", ""Home Food"", ""North Indian"", ""Desserts""]",2026-06-08T15:30:05.469690
+swiggy,Chicking,swiggy_1373307,Bengaluru,Vijayanagar,"Vijayanagar, Bengaluru",12.9716,77.5946,₹₹,"[""Continental"", ""Indian"", ""Fast Food"", ""Burgers""]",2026-06-08T15:30:05.469946
+swiggy,Truth Bowl,swiggy_1053962,Bengaluru,Central Bangalore,"Residency Road, Bengaluru",12.9716,77.5946,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:30:05.470193
+swiggy,Burger King,swiggy_341867,Bengaluru,BTM Layout,"Forum Mall, Bengaluru",12.9279,77.6271,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:14.104818
+swiggy,Domino's Pizza,swiggy_23786,Bengaluru,Koramangala,"4th Block, Bengaluru",12.9279,77.6271,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:14.105284
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_1308,Bengaluru,HSR Layout,"HSR Layout, Bengaluru",12.9279,77.6271,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:30:14.105591
+swiggy,Bakingo,swiggy_50467,Bengaluru,Koramangala,"1st Block, Bengaluru",12.9279,77.6271,₹₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:14.105874
+swiggy,Dum Safar Biryani,swiggy_586682,Bengaluru,Koramangala,"1st Block, Bengaluru",12.9279,77.6271,₹₹,"[""Biryani"", ""Hyderabadi"", ""Kebabs"", ""North Indian"", ""barbeque""]",2026-06-08T15:30:14.106152
+swiggy,McDonald's,swiggy_140887,Bengaluru,Koramangala,"Mantri Avenue, Bengaluru",12.9279,77.6271,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:14.106450
+swiggy,Go Zero Ice Creams & Desserts,swiggy_688356,Bengaluru,Koramangala,"Eejipura, Bengaluru",12.9279,77.6271,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:30:14.106732
+swiggy,Blue Tokai Coffee Roasters,swiggy_776753,Bengaluru,Koramangala,"1St Cross Rd, Bengaluru",12.9279,77.6271,₹₹,"[""Cafe"", ""Coffee"", ""Beverages""]",2026-06-08T15:30:14.107002
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_319086,Bengaluru,Koramangala,"4th B Block, Bengaluru",12.9279,77.6271,₹,"[""Desserts""]",2026-06-08T15:30:14.107263
+swiggy,KFC,swiggy_17304,Bengaluru,RT Nagar,"Ganganagar, Bengaluru",13.0358,77.597,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:23.159847
+swiggy,Pizza Hut,swiggy_14555,Bengaluru,RT Nagar,"RT Nagar, Bengaluru",13.0358,77.597,₹₹,"[""Pizzas""]",2026-06-08T15:30:23.160762
+swiggy,Barbeque Nation,swiggy_652868,Bengaluru,Hebbal,"HEBBAL, Bengaluru",13.0358,77.597,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:30:23.161143
+swiggy,Nandhana Palace,swiggy_23353,Bengaluru,Hebbal,"Byatarayanapura, Bengaluru",13.0358,77.597,₹₹,"[""Biryani"", ""Andhra"", ""South Indian"", ""North Indian""]",2026-06-08T15:30:23.161412
+swiggy,Domino's Pizza,swiggy_23843,Bengaluru,RT Nagar,"RT Nagar, Bengaluru",13.0358,77.597,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:23.161675
+swiggy,Homely,swiggy_64681,Bengaluru,RT Nagar,"Hebbala, Bengaluru",13.0358,77.597,₹,"[""Home Food"", ""South Indian"", ""Beverages"", ""Desserts"", ""Thalis""]",2026-06-08T15:30:23.161919
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_2998,Bengaluru,RT Nagar,"RT Nagar, Bengaluru",13.0358,77.597,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:30:23.162163
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_784805,Bengaluru,Hebbal,"BELLARY ROAD, Bengaluru",13.0358,77.597,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:23.162443
+swiggy,Bakingo,swiggy_111834,Bengaluru,RT Nagar,"P&T Colony, Bengaluru",13.0358,77.597,₹₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:23.162712
+swiggy,A2B - Adyar Ananda Bhavan,swiggy_12810,Bengaluru,RT Nagar,"RT Nagar, Bengaluru",13.0358,77.597,₹₹,"[""South Indian"", ""North Indian"", ""Sweets"", ""Chinese""]",2026-06-08T15:30:23.162972
+swiggy,Cheesecake & co.,swiggy_721822,Bengaluru,Koramangala,"rt nagar, Bengaluru",13.0358,77.597,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:30:23.163236
+swiggy,Polar Bear,swiggy_17589,Bengaluru,RT Nagar,"Deve Gowda Nagar, Bengaluru",13.0358,77.597,₹₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:23.163503
+swiggy,McDonald's,swiggy_560792,Bengaluru,RT Nagar,"Ganganagar, Bengaluru",13.0358,77.597,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:23.163761
+swiggy,The Belgian Waffle Co.,swiggy_657861,Bengaluru,RT Nagar,"80 Feet Rd, Bengaluru",13.0358,77.597,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:30:23.164044
+swiggy,Grameen Kulfi,swiggy_352792,Bengaluru,Central Bangalore,"Robertson Road, Bengaluru",13.0358,77.597,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:23.164305
+swiggy,Go Zero Ice Creams & Desserts,swiggy_662585,Bengaluru,Hebbal,"Bayanna Layout, Bengaluru",13.0358,77.597,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:30:23.164555
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_333153,Bengaluru,RT Nagar,"Dinnur Main Road, Bengaluru",13.0358,77.597,₹,"[""Desserts"", ""Ice Cream""]",2026-06-08T15:30:23.164801
+swiggy,Nandhini Deluxe,swiggy_3435,Bengaluru,RT Nagar,"Ganganagar, Bengaluru",13.0358,77.597,₹₹,"[""North Indian"", ""Chinese"", ""Andhra"", ""Biryani""]",2026-06-08T15:30:23.165047
+swiggy,McDonald's Gourmet Burger Collection,swiggy_560794,Bengaluru,RT Nagar,"Ganganagar, Bengaluru",13.0358,77.597,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:23.165298
+swiggy,SMOOR,swiggy_519528,Bengaluru,RT Nagar,"HMT LAYOUT, Bengaluru",13.0358,77.597,₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T15:30:23.165644
+swiggy,Nandhana Palace,swiggy_791692,Bengaluru,RT Nagar,"80 Feet Road, Bengaluru",13.0358,77.597,₹₹,"[""Andhra""]",2026-06-08T15:30:23.165918
+swiggy,Burger King,swiggy_1010452,Bengaluru,RT Nagar,"RT Nagar, Bengaluru",13.0358,77.597,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:23.166158
+swiggy,KFC,swiggy_334475,Bengaluru,BTM Layout,"2nd Stage, Bengaluru",12.9141,77.6101,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:29.555647
+swiggy,Barbeque Nation,swiggy_295101,Bengaluru,Jayanagar,"Bannerghatta Road, Bengaluru",12.9141,77.6101,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:30:29.556083
+swiggy,Pizza Hut,swiggy_10894,Bengaluru,BTM Layout,"RASHTRAKAVI KUVEMPU NAGAR, Bengaluru",12.9141,77.6101,₹₹,"[""Pizzas""]",2026-06-08T15:30:29.556397
+swiggy,Nandhana Palace,swiggy_12804,Bengaluru,Jayanagar,"JP Nagar, Bengaluru",12.9141,77.6101,₹₹,"[""Biryani"", ""Andhra"", ""South Indian"", ""North Indian""]",2026-06-08T15:30:29.556684
+swiggy,Homely,swiggy_119068,Bengaluru,BTM Layout,"Yelanahalli, Bengaluru",12.9141,77.6101,₹,"[""Home Food"", ""South Indian"", ""Beverages"", ""Desserts"", ""Thalis""]",2026-06-08T15:30:29.556986
+swiggy,Domino's Pizza,swiggy_23819,Bengaluru,BTM Layout,"BTM Layout, Bengaluru",12.9141,77.6101,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:29.557277
+swiggy,Burger King,swiggy_42579,Bengaluru,BTM Layout,"Vega City Mall, Bengaluru",12.9141,77.6101,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:29.557549
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_35888,Bengaluru,BTM Layout,"1st Stage, Bengaluru",12.9141,77.6101,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:30:29.557855
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_50018,Bengaluru,Banashankari,"Bilekahalli, Bengaluru",12.9141,77.6101,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:29.558145
+swiggy,California Burrito,swiggy_49704,Bengaluru,Jayanagar,"5th Phase, Bengaluru",12.9141,77.6101,₹,"[""Mexican"", ""American"", ""Salads"", ""Continental"", ""Keto"", ""Healthy Food"", ""Beverages"", ""Snacks"", ""Desserts"", ""Fast Food""]",2026-06-08T15:30:29.558433
+swiggy,Popeyes,swiggy_668624,Bengaluru,BTM Layout,"2nd Stage, Bengaluru",12.9141,77.6101,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:29.558706
+swiggy,Natural Ice Cream,swiggy_29671,Bengaluru,Banashankari,"Pandurangnagar, Bengaluru",12.9141,77.6101,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:29.558980
+swiggy,McDonald's,swiggy_23683,Bengaluru,BTM Layout,"2nd Stage, Bengaluru",12.9141,77.6101,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:29.559258
+swiggy,Theobroma,swiggy_325024,Bengaluru,BTM Layout,"BTM Layout, Bengaluru",12.9141,77.6101,₹₹,"[""Bakery"", ""Desserts"", ""Beverages""]",2026-06-08T15:30:29.559555
+swiggy,Ambur Star Briyani Since 1890,swiggy_108097,Bengaluru,BTM Layout,"2nd Stage, Bengaluru",12.9141,77.6101,₹₹,"[""Biryani"", ""Chettinad"", ""Andhra"", ""Beverages"", ""Seafood""]",2026-06-08T15:30:29.559827
+swiggy,Subway,swiggy_752839,Bengaluru,BTM Layout,"Kuvempu Nagar, Bengaluru",12.9141,77.6101,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:30:29.560091
+swiggy,La Pino'z Pizza,swiggy_211192,Bengaluru,BTM Layout,"2nd Stage, Bengaluru",12.9141,77.6101,₹,"[""Pizzas"", ""Pastas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T15:30:29.560342
+swiggy,The Belgian Waffle Co.,swiggy_477963,Bengaluru,BTM Layout,"2nd Stage, Bengaluru",12.9141,77.6101,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T15:30:29.560604
+swiggy,A2B - Adyar Ananda Bhavan,swiggy_307,Bengaluru,BTM Layout,"BTM Layout, Bengaluru",12.9141,77.6101,₹₹,"[""South Indian"", ""Sweets"", ""Chinese""]",2026-06-08T15:30:29.560880
+swiggy,Burger King,swiggy_1336699,Bengaluru,BTM Layout,"BTM Layout, B.B.M.P south, Bengaluru",12.9141,77.6101,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:29.561165
+swiggy,Truth Bowl,swiggy_1053708,Bengaluru,BTM Layout,"NGK Complex, Bengaluru",12.9141,77.6101,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:30:29.561421
+swiggy,Domino's Pizza,swiggy_79466,Bengaluru,Whitefield,"Whitefield, Bengaluru",12.9698,77.7499,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:37.245519
+swiggy,Popeyes,swiggy_861910,Bengaluru,Nexus Whitefield,"Mahadevapura, Bengaluru",12.9698,77.7499,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:37.245935
+swiggy,Bakingo,swiggy_550793,Bengaluru,Whitefield,"Hagdur Road, Bengaluru",12.9698,77.7499,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:37.246243
+swiggy,Imperio Restaurant Since 2010,swiggy_28608,Bengaluru,Whitefield,"Gunjur, Bengaluru",12.9698,77.7499,₹₹,"[""Biryani"", ""Kebabs"", ""South Indian"", ""Tandoor"", ""Beverages"", ""Desserts"", ""Ice Cream""]",2026-06-08T15:30:37.246559
+swiggy,The Belgian Waffle Co.,swiggy_398804,Bengaluru,Whitefield,"Hagadur Main Rd, Bengaluru",12.9698,77.7499,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T15:30:37.246862
+swiggy,Natural Ice Cream,swiggy_314429,Bengaluru,Whitefield,"Hagdur Road, Bengaluru",12.9698,77.7499,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:37.247125
+swiggy,Glen's Bakehouse,swiggy_46461,Bengaluru,Whitefield,"Whitefield, Bengaluru",12.9698,77.7499,₹₹₹,"[""Desserts"", ""Bakery"", ""Beverages"", ""Continental"", ""Italian""]",2026-06-08T15:30:37.247369
+swiggy,ITC Master Chef Creations,swiggy_853141,Bengaluru,Whitefield,"Whitefield Main Road, Bengaluru",12.9698,77.7499,₹₹₹,"[""North Indian"", ""Biryani"", ""Kebabs"", ""rolls"", ""Desserts""]",2026-06-08T15:30:37.247613
+swiggy,ITC Sunfeast Baked Creations,swiggy_853142,Bengaluru,Whitefield,"Whitefield Main Road, Bengaluru",12.9698,77.7499,₹₹,"[""bakery"", ""dessert"", ""Cakes & Pastries"", ""Sweets""]",2026-06-08T15:30:37.247849
+swiggy,Aubree,swiggy_653239,Bengaluru,Whitefield,"Meer Complex, Bengaluru",12.9698,77.7499,₹₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T15:30:37.248082
+swiggy,Caterspoint,swiggy_788383,Bengaluru,Whitefield,"Mvj College Of Engineering, Bengaluru",12.9698,77.7499,₹₹,"[""Salads"", ""Healthy food"", ""Snacks"", ""pastas"", ""Lebanese"", ""Mexican"", ""Desserts"", ""Beverages""]",2026-06-08T15:30:37.248325
+swiggy,SMOOR Gourmet Eats,swiggy_785520,Bengaluru,Whitefield,"Whitefield, Bengaluru",12.9698,77.7499,₹₹₹,"[""Asian"", ""Burgers"", ""Italian"", ""Thai"", ""Sushi"", ""Salads"", ""Pastas"", ""Mexican"", ""Chinese"", ""Pizzas""]",2026-06-08T15:30:37.248589
+swiggy,SMOOR,swiggy_485215,Bengaluru,Whitefield,"Narayanappa Garden, Bengaluru",12.9698,77.7499,₹₹,"[""Asian"", ""Burgers"", ""Italian"", ""Thai"", ""Sushi"", ""Salads"", ""Pastas"", ""Pizzas"", ""Mexican"", ""Chinese""]",2026-06-08T15:30:37.248856
+swiggy,Saladspoint,swiggy_806571,Bengaluru,Whitefield,"Channasandra Main Road, Bengaluru",12.9698,77.7499,₹₹,"[""Salads"", ""Healthy food"", ""Juices"", ""Beverages""]",2026-06-08T15:30:37.249100
+swiggy,Madno - House of Sundaes and Waffles,swiggy_439641,Bengaluru,Whitefield,"Whitefield Main Road, Bengaluru",12.9698,77.7499,₹,"[""Ice Cream"", ""Desserts"", ""Waffle""]",2026-06-08T15:30:37.249373
+swiggy,ZAZA Mughal Biryani,swiggy_391004,Bengaluru,Whitefield,"Opp.Post Office, Bengaluru",12.9698,77.7499,₹,"[""Biryani"", ""North Indian"", ""Awadhi""]",2026-06-08T15:30:37.249632
+swiggy,MOJO Pizza - 2X Toppings,swiggy_622029,Bengaluru,Whitefield,"Kadugodi, Bengaluru",12.9698,77.7499,₹,"[""Pizzas"", ""Italian"", ""Fast Food"", ""Desserts""]",2026-06-08T15:30:37.249879
+swiggy,NH1 Bowls - Highway To North,swiggy_390056,Bengaluru,Whitefield,"Opp.Post Office, Bengaluru",12.9698,77.7499,₹,"[""North Indian"", ""Punjabi"", ""Home Food""]",2026-06-08T15:30:37.250118
+swiggy,LeanCrust Pizza- ThinCrust Experts,swiggy_681438,Bengaluru,Whitefield,"Opp.Post Office, Bengaluru",12.9698,77.7499,₹₹,"[""Pizzas"", ""Italian"", ""Desserts""]",2026-06-08T15:30:37.250354
+swiggy,Daily Kitchen - Everyday Homely Meals,swiggy_750224,Bengaluru,Whitefield,"Opp.Post Office, Bengaluru",12.9698,77.7499,₹,"[""Home Food"", ""Indian"", ""North Indian"", ""Thalis""]",2026-06-08T15:30:37.250617
+swiggy,Homely,swiggy_1213856,Bengaluru,Whitefield,"Hagudur Colony, Bengaluru",12.9698,77.7499,₹,"[""South Indian"", ""Home Food"", ""North Indian"", ""Desserts""]",2026-06-08T15:30:37.250894
+swiggy,Truth Bowl,swiggy_1053700,Bengaluru,Whitefield,"HAGDUR ROAD, Bengaluru",12.9698,77.7499,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:30:37.251153
+swiggy,Mealy - Your Everyday Meal,swiggy_1213861,Bengaluru,Whitefield,"Hagudur Colony, Bengaluru",12.9698,77.7499,₹,"[""Street Food"", ""North Indian"", ""Beverages""]",2026-06-08T15:30:37.251406
+swiggy,Bangalore Mandarin,swiggy_214140,Bengaluru,Whitefield,"Whitefield, Bengaluru",12.9698,77.7499,₹₹₹,"[""Chinese""]",2026-06-08T15:30:37.251655
+swiggy,Sri Laksmi Vaibhava,swiggy_50155,Bengaluru,Whitefield,"Vinayaka Layout, Bengaluru",12.9698,77.7499,₹,"[""Chinese"", ""Desserts"", ""Jain"", ""North Indian"", ""South Indian"", ""Sweets""]",2026-06-08T15:30:37.251907
+swiggy,Barbeque Nation,swiggy_716563,Bengaluru,Marathahalli,"VARTHUR, Bengaluru",12.9592,77.6974,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:30:45.372248
+swiggy,Pizza Hut,swiggy_10866,Bengaluru,Marathahalli,"Marathahalli, Bengaluru",12.9592,77.6974,₹₹,"[""Pizzas""]",2026-06-08T15:30:45.372674
+swiggy,KFC,swiggy_17303,Bengaluru,Marathahalli,"Brookefields, Bengaluru",12.9592,77.6974,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:45.372988
+swiggy,Domino's Pizza,swiggy_29972,Bengaluru,Marathahalli,"marathalli, Bengaluru",12.9592,77.6974,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:45.373243
+swiggy,Homely,swiggy_448238,Bengaluru,Whitefield,"Marathahalli�, Bengaluru",12.9592,77.6974,₹,"[""Home Food"", ""South Indian"", ""Beverages"", ""Desserts"", ""Thalis""]",2026-06-08T15:30:45.373493
+swiggy,Burger King,swiggy_445762,Bengaluru,RT Nagar,"Kote MR Plaza, Bengaluru",12.9592,77.6974,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:45.373745
+swiggy,California Burrito,swiggy_18772,Bengaluru,Marathahalli,"Bellandur, Bengaluru",12.9592,77.6974,₹,"[""Mexican"", ""American"", ""Salads"", ""Continental"", ""Keto"", ""Healthy Food"", ""Beverages"", ""Snacks"", ""Desserts"", ""Fast Food""]",2026-06-08T15:30:45.374018
+swiggy,ITC Sunfeast Baked Creations,swiggy_672015,Bengaluru,Marathahalli,"Tulsi Theater Rd, Bengaluru",12.9592,77.6974,₹₹,"[""bakery"", ""dessert"", ""Cakes & Pastries"", ""Sweets""]",2026-06-08T15:30:45.374268
+swiggy,SMOOR,swiggy_352903,Bengaluru,Marathahalli,"Tulasi Theater Road, Bengaluru",12.9592,77.6974,₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T15:30:45.374507
+swiggy,Oven Story Pizza,swiggy_23104,Bengaluru,Whitefield,"Doddanekundi Main Road, Pragathi Layout, Bengaluru",12.9592,77.6974,₹₹,"[""Pizzas"", ""Pastas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T15:30:45.374751
+swiggy,Huber & Holly,swiggy_619693,Bengaluru,Marathahalli,"Marathahalli, Bengaluru",12.9592,77.6974,₹₹,"[""Ice Cream"", ""Pizzas"", ""Desserts"", ""Cakes""]",2026-06-08T15:30:45.375000
+swiggy,Sweet Truth - Cake and Desserts,swiggy_249716,Bengaluru,Marathahalli,"Tulasi theater, Bengaluru",12.9592,77.6974,₹₹,"[""Desserts"", ""Ice Cream"", ""Bakery"", ""Beverages""]",2026-06-08T15:30:45.375241
+swiggy,Wendy's Burgers,swiggy_382651,Bengaluru,Marathahalli,"Tulasi theater, Bengaluru",12.9592,77.6974,₹,"[""Burgers"", ""American"", ""Fast Food"", ""Snacks""]",2026-06-08T15:30:45.375501
+swiggy,Paradise Biryani,swiggy_250298,Bengaluru,Marathahalli,"Marathahalli, Bengaluru",12.9592,77.6974,₹₹,"[""Biryani"", ""Kebabs"", ""North Indian"", ""Hyderabadi""]",2026-06-08T15:30:45.375767
+swiggy,Bakingo,swiggy_551489,Bengaluru,Panathur main road,"Darshan layout, Bengaluru",12.9592,77.6974,₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:45.376005
+swiggy,Mad Over Donuts,swiggy_525179,Bengaluru,Marathahalli,"Tulasi Theater Road, Bengaluru",12.9592,77.6974,₹,"[""Desserts""]",2026-06-08T15:30:45.376247
+swiggy,Cheesecake & Co.,swiggy_709164,Bengaluru,Marathahalli,"ITPL Road, Bengaluru",12.9592,77.6974,₹₹,"[""Desserts"", ""Bakery""]",2026-06-08T15:30:45.376475
+swiggy,Dum Safar Biryani,swiggy_716565,Bengaluru,Marathahalli,"VARTHUR, Bengaluru",12.9592,77.6974,₹₹,"[""Biryani"", ""Hyderabadi"", ""Kebabs"", ""North Indian"", ""barbeque""]",2026-06-08T15:30:45.376737
+swiggy,Subway,swiggy_32778,Bengaluru,Whitefield,"Divyashree Technopolis, Bengaluru",12.9592,77.6974,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:30:45.376987
+swiggy,The Belgian Waffle Co.,swiggy_390620,Bengaluru,Marathahalli,"Tulasi Theater Road, Bengaluru",12.9592,77.6974,₹,"[""Waffle"", ""Desserts"", ""Ice Cream""]",2026-06-08T15:30:45.377225
+swiggy,Pizza Hut,swiggy_1275027,Bengaluru,Marathahalli,"Munekolalu Village, Bengaluru",12.9592,77.6974,₹₹,"[""Pizzas""]",2026-06-08T15:30:45.377470
+swiggy,Seoul Burgers & Shakes,swiggy_1343799,Bengaluru,Marathahalli,"Agrahara Rd, Bengaluru",12.9592,77.6974,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:30:45.377702
+swiggy,Truth Bowl,swiggy_1053925,Bengaluru,Marathahalli,"Tulasi theater, Bengaluru",12.9592,77.6974,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:30:45.377957
+swiggy,KFC,swiggy_833334,Bengaluru,JP Nagar,"JAYACHAMARAJENDRA, Bengaluru",12.8995,77.5765,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:52.016411
+swiggy,Pizza Hut,swiggy_29312,Bengaluru,JP Nagar,"Puttenahalli Rd, Bengaluru",12.8995,77.5765,₹₹,"[""Pizzas""]",2026-06-08T15:30:52.017069
+swiggy,Nandhana Palace,swiggy_69896,Bengaluru,Banashankari,"Kanakapura Road, Bengaluru",12.8995,77.5765,₹₹,"[""Biryani"", ""Andhra"", ""South Indian"", ""North Indian""]",2026-06-08T15:30:52.017528
+swiggy,Burger King,swiggy_648814,Bengaluru,Banashankari,"Forum Falcon City Mall, Bengaluru",12.8995,77.5765,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:52.017897
+swiggy,Seoul Burgers & Shakes,swiggy_744081,Bengaluru,Banashankari,"5th Phase, Bengaluru",12.8995,77.5765,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:30:52.018215
+swiggy,Domino's Pizza,swiggy_38953,Bengaluru,Banashankari,"1st Stage, Bengaluru",12.8995,77.5765,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:52.018537
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_42155,Bengaluru,JP Nagar,"JP Nagar, Bengaluru",12.8995,77.5765,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:30:52.018858
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_745576,Bengaluru,Banashankari,"Forum Falcon City Mall, Bengaluru",12.8995,77.5765,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:52.019161
+swiggy,RNR Biryani - Taste of 1953,swiggy_330839,Bengaluru,Jayanagar,"1st Phase, Bengaluru",12.8995,77.5765,₹₹,"[""Biryani"", ""South Indian"", ""Kebabs""]",2026-06-08T15:30:52.019455
+swiggy,Paris Panini - Gourmet Sandwiches & Wraps,swiggy_434304,Bengaluru,Jayanagar,"JP Nagar, Bengaluru",12.8995,77.5765,₹₹,"[""sandwich"", ""wrap"", ""Fast Food"", ""Pastas"", ""Italian"", ""Salads"", ""Healthy Food"", ""Desserts"", ""Continental""]",2026-06-08T15:30:52.019724
+swiggy,Subway,swiggy_783454,Bengaluru,JP Nagar,"JP Nagar, 7th Phase, Bengaluru",12.8995,77.5765,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:30:52.020028
+swiggy,Theobroma,swiggy_437065,Bengaluru,Jayanagar,"Jayanagar, Bengaluru",12.8995,77.5765,₹₹,"[""Desserts"", ""Bakery"", ""Beverages""]",2026-06-08T15:30:52.020342
+swiggy,McDonald's,swiggy_23692,Bengaluru,JP Nagar,"JP NAGAR 6th phase, Bengaluru",12.8995,77.5765,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:52.020624
+swiggy,The Belgian Waffle Co.,swiggy_647326,Bengaluru,JP Nagar,"7th Phase, Bengaluru",12.8995,77.5765,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:30:52.020895
+swiggy,Natural Ice Cream,swiggy_29672,Bengaluru,Jayanagar,"Jayanagar, Bengaluru",12.8995,77.5765,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:52.021164
+swiggy,Goila Butter Chicken,swiggy_588811,Bengaluru,Banashankari,"Raghuvanahalli, Bengaluru",12.8995,77.5765,₹₹,"[""North Indian"", ""Biryani"", ""Mughlai""]",2026-06-08T15:30:52.021423
+swiggy,Ambur Star Briyani Since 1890,swiggy_350560,Bengaluru,Banashankari,"JP Nagar, Bengaluru",12.8995,77.5765,₹,"[""North Indian"", ""Chinese"", ""Tandoor"", ""Hyderabadi""]",2026-06-08T15:30:52.021717
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_22993,Bengaluru,Banashankari,"JP Nagar, Bengaluru",12.8995,77.5765,₹,"[""Ice Cream"", ""Beverages"", ""Desserts""]",2026-06-08T15:30:52.022008
+swiggy,Polar Bear,swiggy_33597,Bengaluru,Jayanagar,"5th Phase, Bengaluru",12.8995,77.5765,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:52.022281
+swiggy,Pizza Hut,swiggy_1007963,Bengaluru,Banashankari,"Kumaraswamy Layout, Bengaluru",12.8995,77.5765,₹₹,"[""Pizza"", "" Fast Food"", "" Italian"", "" Desserts"", "" Beverages""]",2026-06-08T15:30:52.022537
+swiggy,Barbeque Nation,swiggy_415372,Bengaluru,Banashankari,"Uttarahalli, Bengaluru",12.8995,77.5765,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:30:52.022792
+swiggy,Homely,swiggy_1265822,Bengaluru,JP Nagar,"Jayanagar, Bengaluru",12.8995,77.5765,₹,"[""South Indian"", ""Home Food"", ""North Indian"", ""Desserts""]",2026-06-08T15:30:52.023086
+swiggy,KFC,swiggy_30955,Bengaluru,Malleshwaram,"Mantri Square, Bengaluru",13.0012,77.5757,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:30:59.413794
+swiggy,Pizza Hut,swiggy_10591,Bengaluru,Malleshwaram,"Sampige Road, Bengaluru",13.0012,77.5757,₹₹,"[""Pizzas""]",2026-06-08T15:30:59.414217
+swiggy,Nandhana Palace,swiggy_18975,Bengaluru,Rajajinagar,"Rajajinagar, Bengaluru",13.0012,77.5757,₹₹,"[""Biryani"", ""Andhra"", ""South Indian"", ""North Indian""]",2026-06-08T15:30:59.414508
+swiggy,Burger King,swiggy_5932,Bengaluru,Malleshwaram,"Malleshwaram, Bengaluru",13.0012,77.5757,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:30:59.414789
+swiggy,Seoul Burgers & Shakes,swiggy_767218,Bengaluru,Rajajinagar,"6TH BLOCK, Bengaluru",13.0012,77.5757,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:30:59.415065
+swiggy,Domino's Pizza,swiggy_23797,Bengaluru,Malleshwaram,"5Th Cross, Bengaluru",13.0012,77.5757,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:30:59.415331
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_59147,Bengaluru,Malleshwaram,"Malleshwaram, Bengaluru",13.0012,77.5757,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:30:59.415579
+swiggy,Paris Panini - Gourmet Sandwiches & Wraps,swiggy_591680,Bengaluru,Rajajinagar,"Rajajinagar, Bengaluru",13.0012,77.5757,₹₹,"[""sandwich"", ""wrap"", ""Fast Food"", ""Pastas"", ""Italian"", ""Salads"", ""Healthy Food"", ""Desserts"", ""Continental""]",2026-06-08T15:30:59.415843
+swiggy,Grameen Kulfi,swiggy_352790,Bengaluru,Rajajinagar,"Bashyam Circle, Bengaluru",13.0012,77.5757,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:59.416112
+swiggy,Go Zero Ice Creams & Desserts,swiggy_814917,Bengaluru,Rajajinagar,"LANDMARK TAKE RIGHT FROM PARK SIDE, Bengaluru",13.0012,77.5757,₹,"[""Ice Cream"", ""Desserts"", ""Healthy Food""]",2026-06-08T15:30:59.416358
+swiggy,California Burrito,swiggy_30083,Bengaluru,Malleshwaram,"Sadashivanagar , Bengaluru",13.0012,77.5757,₹,"[""Mexican"", ""American"", ""Salads"", ""Continental"", ""Keto"", ""Healthy Food"", ""Beverages"", ""Snacks"", ""Desserts"", ""Fast Food""]",2026-06-08T15:30:59.416595
+swiggy,Natural Ice Cream,swiggy_27809,Bengaluru,Malleshwaram,"Malleshwaram, Bengaluru",13.0012,77.5757,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:30:59.416841
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_9208,Bengaluru,Malleshwaram,"Milk colony, Bengaluru",13.0012,77.5757,₹,"[""Desserts""]",2026-06-08T15:30:59.417101
+swiggy,McDonald's,swiggy_63317,Bengaluru,Malleshwaram,"Mantri Square Mall, Bengaluru",13.0012,77.5757,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:30:59.417408
+swiggy,La Pino'z Pizza,swiggy_668016,Bengaluru,Rajajinagar,"Malleshwaram, Bengaluru",13.0012,77.5757,₹₹,"[""Pizzas"", ""Pastas"", ""Italian"", ""Desserts"", ""Beverages""]",2026-06-08T15:30:59.417655
+swiggy,The Belgian Waffle Co.,swiggy_776939,Bengaluru,Malleshwaram,"KODHANDARAMAPURAM, Bengaluru",13.0012,77.5757,₹,"[""Waffle"", ""Desserts"", ""Ice Cream"", ""Beverages""]",2026-06-08T15:30:59.417910
+swiggy,A2B - Adyar Ananda Bhavan,swiggy_12811,Bengaluru,Malleshwaram,"Sampige Road, Bengaluru",13.0012,77.5757,₹₹,"[""South Indian"", ""Sweets"", ""Chinese""]",2026-06-08T15:30:59.418175
+swiggy,Priyadarshini Veg,swiggy_57086,Bengaluru,Yeshwantpur,"Race Course Road, Bengaluru",13.0012,77.5757,₹,"[""North Indian"", ""South Indian"", ""Chinese"", ""Fast Food"", ""Desserts""]",2026-06-08T15:30:59.418431
+swiggy,Barbeque Nation,swiggy_657644,Bengaluru,Rajajinagar,"GLOBAL MALLS, Bengaluru",13.0012,77.5757,₹₹,"[""North Indian"", ""Barbecue"", ""Kebabs"", ""Biryani"", ""Street Food"", ""Snacks""]",2026-06-08T15:30:59.418681
+swiggy,Seoul Burgers & Shakes,swiggy_1208978,Bengaluru,Malleshwaram,"Central bus sto, Bengaluru",13.0012,77.5757,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:30:59.418917
+swiggy,Chicking,swiggy_455002,Bengaluru,Rajajinagar,"Binnipete, Bengaluru",13.0012,77.5757,₹₹,"[""American"", ""Grill"", ""Fast Food"", ""Snacks"", ""Pizzas"", ""Mexican"", ""Beverages""]",2026-06-08T15:30:59.419184
+swiggy,Truth Bowl,swiggy_1053905,Bengaluru,Malleshwaram,"Central Hall, Bengaluru",13.0012,77.5757,₹,"[""North Indian"", ""High Protein"", ""Biryani""]",2026-06-08T15:30:59.419434
+swiggy,Pizza Hut,swiggy_14534,Bengaluru,Banashankari,"6th Block, Bengaluru",12.9365,77.5538,₹₹,"[""Pizzas""]",2026-06-08T15:31:06.692767
+swiggy,KFC,swiggy_334474,Bengaluru,Banashankari,"3rd Stage, Bengaluru",12.9365,77.5538,₹₹,"[""Burgers"", ""Fast Food"", ""Rolls & Wraps""]",2026-06-08T15:31:06.693155
+swiggy,Burger King,swiggy_594259,Bengaluru,Jayanagar,"3rd Stage, Bengaluru",12.9365,77.5538,₹₹,"[""Burgers"", ""American""]",2026-06-08T15:31:06.693438
+swiggy,Domino's Pizza,swiggy_108423,Bengaluru,Banashankari,"1st Stage, Bengaluru",12.9365,77.5538,₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Desserts""]",2026-06-08T15:31:06.693695
+swiggy,Rolls On Wheels - Shawarma & Wraps,swiggy_1469,Bengaluru,Jayanagar,"Banashankari, Bengaluru",12.9365,77.5538,₹₹,"[""Rolls & Wraps"", ""Snacks"", ""Fast Food"", ""North Indian""]",2026-06-08T15:31:06.693942
+swiggy,Krispy Kreme - Doughnuts & Coffee,swiggy_365932,Bengaluru,Jayanagar,"Basavanagudi, Bengaluru",12.9365,77.5538,₹,"[""Desserts"", ""Cafe"", ""Bakery"", ""Coffee"", ""Beverages"", ""Snacks""]",2026-06-08T15:31:06.694185
+swiggy,Paris Panini - Gourmet Sandwiches & Wraps,swiggy_760197,Bengaluru,Banashankari,"100 Feet Ring Road, Bengaluru",12.9365,77.5538,₹₹,"[""sandwich"", ""wrap"", ""Fast Food"", ""Pastas"", ""Italian"", ""Salads"", ""Healthy Food"", ""Desserts"", ""Continental""]",2026-06-08T15:31:06.694455
+swiggy,The Pizza Bakery - Wood Fired Sourdough,swiggy_760190,Bengaluru,Banashankari,"100 Feet Ring Road, Bengaluru",12.9365,77.5538,₹₹₹,"[""Pizzas"", ""Italian"", ""Pastas"", ""Salads"", ""Desserts"", ""Continental""]",2026-06-08T15:31:06.694711
+swiggy,Theobroma,swiggy_775570,Bengaluru,Banashankari,"100 Feet Ring Road, Bengaluru",12.9365,77.5538,₹₹,"[""Bakery"", ""Desserts""]",2026-06-08T15:31:06.694955
+swiggy,Bakingo,swiggy_420020,Bengaluru,Banashankari,"Banashankari 3rd Stage, BTM Layout, Bengaluru",12.9365,77.5538,₹₹,"[""Bakery"", ""Desserts"", ""Beverages"", ""Snacks""]",2026-06-08T15:31:06.695192
+swiggy,Subway,swiggy_1452,Bengaluru,Jayanagar,"Bull Temple Road, Bengaluru",12.9365,77.5538,₹₹,"[""sandwich"", ""Salads"", ""wrap"", ""Healthy Food""]",2026-06-08T15:31:06.695424
+swiggy,A2B - Adyar Ananda Bhavan,swiggy_1468,Bengaluru,Jayanagar,"Basavanagudi, Bengaluru",12.9365,77.5538,₹₹,"[""South Indian"", ""North Indian"", ""Sweets"", ""Chinese""]",2026-06-08T15:31:06.695661
+swiggy,McDonald's,swiggy_23700,Bengaluru,Banashankari,"2nd Stage, Bengaluru",12.9365,77.5538,₹₹,"[""Burgers"", ""Beverages"", ""Cafe"", ""Desserts""]",2026-06-08T15:31:06.695915
+swiggy,Polar Bear,swiggy_94387,Bengaluru,Banashankari,"Banashankari, Bengaluru",12.9365,77.5538,₹₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:31:06.696156
+swiggy,Baskin Robbins - Ice Cream Desserts,swiggy_816758,Bengaluru,Jayanagar,"Siddanna Layout, Bengaluru",12.9365,77.5538,₹,"[""Desserts"", ""Ice Cream""]",2026-06-08T15:31:06.696451
+swiggy,Grameen Kulfi,swiggy_352788,Bengaluru,Jayanagar,"2nd Stage, Bengaluru",12.9365,77.5538,₹,"[""Ice Cream"", ""Desserts""]",2026-06-08T15:31:06.696726
+swiggy,ITC Master Chef Creations,swiggy_501419,Bengaluru,Banashankari,"Banashankari, Bengaluru",12.9365,77.5538,₹₹₹,"[""North Indian"", ""Biryani"", ""Kebabs"", ""rolls"", ""Desserts""]",2026-06-08T15:31:06.696964
+swiggy,ITC Sunfeast Baked Creations,swiggy_501420,Bengaluru,Banashankari,"Banashankari, Bengaluru",12.9365,77.5538,₹₹,"[""bakery"", ""dessert"", ""Cakes & Pastries"", ""Sweets""]",2026-06-08T15:31:06.697214
+swiggy,Seoul Burgers & Shakes,swiggy_822445,Bengaluru,Banashankari,"Chikkallasandra, Bengaluru",12.9365,77.5538,₹,"[""Burger"", ""Bubble Tea"", ""Fast Food"", ""Beverages"", ""Juice and shake""]",2026-06-08T15:31:06.697460
+swiggy,Nandhana Palace,swiggy_389325,Bengaluru,Banashankari,"BEML Layout 5th Stage, Bengaluru",12.9365,77.5538,₹₹,"[""Andhra"", ""Biryani"", ""North Indian"", ""Chinese"", ""Beverages"", ""Desserts""]",2026-06-08T15:31:06.697697
+swiggy,Homely,swiggy_63507,Bengaluru,Vijayanagar,"Ganesha Block, Bengaluru",12.9365,77.5538,₹,"[""Home Food"", ""North Indian"", ""South Indian"", ""Beverages"", ""Desserts"", ""Thalis""]",2026-06-08T15:31:06.697939

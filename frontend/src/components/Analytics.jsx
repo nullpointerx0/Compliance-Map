@@ -9,7 +9,7 @@ import { API_BASE } from '../config';
 
 const COLORS = ['#10B981', '#F59E0B', '#EF4444', '#8B5CF6']; // emerald, amber, red, purple
 
-export default function Analytics() {
+export default function Analytics({ selectedCity }) {
   const [overview, setOverview] = useState(null);
   const [citiesSummary, setCitiesSummary] = useState([]);
   const [platformCompare, setPlatformCompare] = useState([]);
@@ -21,12 +21,13 @@ export default function Analytics() {
     async function fetchAllStats() {
       setLoading(true);
       try {
+        const cityParam = selectedCity ? `?city=${selectedCity}` : '';
         const [overviewRes, citiesRes, platformRes, priceRes, compRes] = await Promise.all([
-          fetch(`${API_BASE}/api/stats/overview`),
+          fetch(`${API_BASE}/api/stats/overview${cityParam}`),
           fetch(`${API_BASE}/api/cities`),
-          fetch(`${API_BASE}/api/stats/platform-comparison`),
-          fetch(`${API_BASE}/api/stats/price-compliance`),
-          fetch(`${API_BASE}/api/graph/components?min_size=1`)
+          fetch(`${API_BASE}/api/stats/platform-comparison${cityParam}`),
+          fetch(`${API_BASE}/api/stats/price-compliance${cityParam}`),
+          fetch(`${API_BASE}/api/graph/components?min_size=1${cityParam ? '&' + cityParam.substring(1) : ''}`)
         ]);
 
         if (overviewRes.ok) setOverview(await overviewRes.json());
@@ -45,7 +46,7 @@ export default function Analytics() {
       }
     }
     fetchAllStats();
-  }, []);
+  }, [selectedCity]);
 
   if (loading) {
     return (
@@ -104,6 +105,14 @@ export default function Analytics() {
   return (
     <div className="flex flex-col gap-6 w-full h-[calc(100vh-12rem)] overflow-y-auto pr-2">
       
+      {/* Single City Note */}
+      {selectedCity && citiesSummary.filter(c => c.total_listings > 0).length === 1 && (
+        <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3 text-xs text-amber-300 flex items-center gap-2">
+          <span className="font-bold">📊 Showing {selectedCity} data</span>
+          <span>— scrape more cities to enable cross-city comparison</span>
+        </div>
+      )}
+
       {/* Overview Cards Row */}
       {overview && (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

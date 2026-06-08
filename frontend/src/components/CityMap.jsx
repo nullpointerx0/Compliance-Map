@@ -10,8 +10,8 @@ const CITIES = [
   'Pune', 'Kolkata', 'Ahmedabad', 'Jaipur', 'Lucknow'
 ];
 
-export default function CityMap() {
-  const [selectedCity, setSelectedCity] = useState('Bengaluru');
+export default function CityMap({ selectedCity: propSelectedCity }) {
+  const [selectedCity, setSelectedCity] = useState(propSelectedCity || 'Bengaluru');
   const [selectedPlatform, setSelectedPlatform] = useState(''); // '' means All, 'swiggy', 'zomato'
   const [geoJsonData, setGeoJsonData] = useState(null);
   const [selectedZone, setSelectedZone] = useState(null);
@@ -44,6 +44,13 @@ export default function CityMap() {
     Lucknow: [26.8467, 80.9462],
   };
 
+  // Sync prop to local state
+  useEffect(() => {
+    if (propSelectedCity) {
+      setSelectedCity(propSelectedCity);
+    }
+  }, [propSelectedCity]);
+
   // Fetch zone geojson for the selected city
   useEffect(() => {
     async function fetchZoneData() {
@@ -54,7 +61,7 @@ export default function CityMap() {
         if (!response.ok) throw new Error('Failed to load zone data');
         const data = await response.json();
         setGeoJsonData(data);
-        
+
         // Auto select first zone in list for details panel
         if (data.features && data.features.length > 0) {
           setSelectedZone(data.features[0].properties);

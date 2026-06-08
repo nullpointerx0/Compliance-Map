@@ -10,11 +10,18 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/app
+      - ./data:/app/data
     env_file:
       - .env
     environment:
-      - DATABASE_URL=sqlite:///./data/compliance.db
+      - DATABASE_URL=sqlite:////app/data/compliance.db
+      - PYTHONUNBUFFERED=1
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/stats/overview"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
   frontend:
     build:
@@ -27,7 +34,8 @@ services:
       - ./frontend:/app
       - /app/node_modules
     environment:
-      - VITE_API_URL=http://localhost:8000
+      - VITE_API_URL=http://backend:8000
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     restart: unless-stopped

@@ -11,13 +11,13 @@ const CITIES = [
   'Pune', 'Kolkata', 'Ahmedabad', 'Jaipur', 'Lucknow'
 ];
 
-export default function AnomalyTable() {
+export default function AnomalyTable({ selectedCity: propSelectedCity }) {
   const [rowData, setRowData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [totalRecords, setTotalRecords] = useState(0);
-  
+
   // Filtering & Pagination State
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState(propSelectedCity || '');
   const [platform, setPlatform] = useState('');
   const [anomalyType, setAnomalyType] = useState('');
   const [severity, setSeverity] = useState('');
@@ -26,6 +26,14 @@ export default function AnomalyTable() {
   const [pageSize, setPageSize] = useState(25);
   
   const gridRef = useRef();
+
+  // Sync prop to local state
+  useEffect(() => {
+    if (propSelectedCity) {
+      setCity(propSelectedCity);
+      setPage(1); // Reset pagination when city changes
+    }
+  }, [propSelectedCity]);
 
   // Construct query parameters
   const queryParams = useMemo(() => {

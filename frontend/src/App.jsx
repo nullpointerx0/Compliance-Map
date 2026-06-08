@@ -3,9 +3,9 @@ import CityMap from './components/CityMap';
 import NetworkGraph from './components/NetworkGraph';
 import AnomalyTable from './components/AnomalyTable';
 import Analytics from './components/Analytics';
-import { 
-  Map, Network, Database, BarChart3, AlertTriangle, ShieldCheck, 
-  ShieldAlert, RefreshCw, Layers, Award 
+import {
+  Map, Network, Database, BarChart3, AlertTriangle, ShieldCheck,
+  ShieldAlert, RefreshCw, Layers, Award, ChevronDown, Zap
 } from 'lucide-react';
 
 import { API_BASE } from './config';
@@ -15,18 +15,48 @@ function App() {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const [backendOnline, setBackendOnline] = useState(true);
-  
+
+  const [selectedCity, setSelectedCity] = useState('Bengaluru');
+  const [cityScrapeStatus, setCityScrapeStatus] = useState([]);
+  const [loadingCities, setLoadingCities] = useState(false);
+
   const [pipeline, setPipeline] = useState({ running: false, step: 'idle' });
   const [polling, setPolling] = useState(false);
 
-  // Fetch top-level global audit statistics and check health
+  // Fetch city scrape status
+  useEffect(() => {
+    async function fetchCityStatus() {
+      setLoadingCities(true);
+      try {
+        const response = await fetch(`${API_BASE}/api/admin/scrape-status`);
+        if (response.ok) {
+          const data = await response.json();
+          setCityScrapeStatus(data);
+          // If there's no selected city or selection not in list, default to first completed city
+          const completedCities = data.filter(c => c.status === 'completed');
+          if (completedCities.length > 0 && (!selectedCity || !data.find(c => c.city === selectedCity && c.status === 'completed'))) {
+            setSelectedCity(completedCities[0].city);
+          } else if (!selectedCity && data.length > 0) {
+            setSelectedCity(data[0].city);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to fetch city status:', err);
+      } finally {
+        setLoadingCities(false);
+      }
+    }
+    fetchCityStatus();
+  }, []);
+
+  // Fetch top-level global audit statistics and check health (scoped to selectedCity)
   useEffect(() => {
     async function checkHealthAndFetchStats() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 3000);
 
       try {
-        const response = await fetch(`${API_BASE}/api/stats/overview`, {
+        const response = await fetch(`${API_BASE}/api/stats/overview?city=${selectedCity}`, {
           signal: controller.signal
         });
         clearTimeout(timeoutId);
@@ -46,8 +76,10 @@ function App() {
         setLoading(false);
       }
     }
-    checkHealthAndFetchStats();
-  }, []);
+    if (!loadingCities) {
+      checkHealthAndFetchStats();
+    }
+  }, [selectedCity, loadingCities]);
 
   // Check initial pipeline status on mount
   useEffect(() => {
@@ -95,10 +127,13 @@ function App() {
     };
   }, [polling]);
 
-  const handleTriggerScrape = async () => {
+  const handleTriggerScrape = async (city = null) => {
     try {
+      const body = city ? JSON.stringify({ cities: [city] }) : undefined;
       const response = await fetch(`${API_BASE}/api/admin/trigger-scrape`, {
-        method: 'POST'
+        method: 'POST',
+        headers: city ? { 'Content-Type': 'application/json' } : {},
+        body: body
       });
       if (response.ok) {
         setPipeline({ running: true, step: 'scraping' });
@@ -122,28 +157,44 @@ function App() {
       )}
       
       {/* Top Banner Navigation */}
-      <header className="border-b border-darkBorder bg-darkCard/50 backdrop-blur-md sticky top-0 z-[1000] px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="p-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl">
-            <Layers className="w-6 h-6 animate-pulse" />
+      <header className="border-b border-darkBorder bg-darkCard/50 backdrop-blur-md sticky top-0 z-[1000] px-6 py-4 flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl">
+              <Layers className="w-6 h-6 animate-pulse" />
+            </div>
+            <div>
+              <h1 className="text-xl font-black tracking-tight text-white flex items-center gap-2">
+                 GHOST KITCHEN COMPLIANCE MONITOR
+                <span className="text-[10px] font-mono tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded font-extrabold uppercase">
+                  Academic Audit
+                </span>
+              </h1>
+              <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">
+                BT232AT • Bio Safety Standards & Ethics • RV College of Engineering
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-xl font-black tracking-tight text-white flex items-center gap-2">
-               GHOST KITCHEN COMPLIANCE MONITOR
-              <span className="text-[10px] font-mono tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded font-extrabold uppercase">
-                Academic Audit
-              </span>
-            </h1>
-            <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">
-              BT232AT • Bio Safety Standards & Ethics • RV College of Engineering
-            </p>
-          </div>
-        </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+          {/* City Selector Dropdown */}
+          {!loadingCities && cityScrapeStatus.length > 0 && (
+            <select
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.target.value)}
+              className="px-4 py-2 rounded-xl text-xs font-bold bg-darkBg border border-darkBorder text-gray-300 cursor-pointer hover:bg-darkBorder/40 transition-all"
+            >
+              {cityScrapeStatus.map(c => (
+                <option key={c.city} value={c.city}>
+                  {c.city} {c.listing_count > 0 ? `(${c.listing_count})` : ''}
+                </option>
+              ))}
+            </select>
+          )}
+
           {/* Refresh Data Button */}
           <button
-            onClick={handleTriggerScrape}
+            onClick={() => handleTriggerScrape(selectedCity)}
             disabled={pipeline.running}
             className={`flex items-center gap-1.5 px-4.5 py-2 rounded-xl text-xs font-bold transition-all border ${
               pipeline.running
@@ -152,8 +203,8 @@ function App() {
             }`}
           >
             <RefreshCw className={`w-3.5 h-3.5 ${pipeline.running ? 'animate-spin' : ''}`} />
-            {pipeline.running 
-              ? `Running: ${pipeline.step.toUpperCase().replace('_', ' ')}` 
+            {pipeline.running
+              ? `Running: ${pipeline.step.toUpperCase().replace('_', ' ')}`
               : 'Refresh Data'
             }
           </button>
@@ -209,8 +260,41 @@ function App() {
             </button>
           </div>
         </div>
+      </div>
 
-      </header>
+      {/* City Scrape Status Panel */}
+      {!loadingCities && cityScrapeStatus.length > 0 && (
+        <div className="grid grid-cols-5 md:grid-cols-10 gap-2">
+          {cityScrapeStatus.map(city => (
+            <div key={city.city} className={`flex flex-col items-center gap-2 p-3 rounded-lg border transition-all cursor-pointer ${
+              city.status === 'completed'
+                ? 'bg-emerald-500/10 border-emerald-500/30 hover:bg-emerald-500/20'
+                : 'bg-gray-500/10 border-gray-500/30 hover:bg-gray-500/20'
+            }`}>
+              <div className="text-[10px] font-bold text-gray-300 text-center truncate w-full px-1">
+                {city.city}
+              </div>
+              {city.status === 'completed' ? (
+                <>
+                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <div className="text-[9px] font-mono text-emerald-300">
+                    {city.listing_count} listings
+                  </div>
+                </>
+              ) : (
+                <button
+                  onClick={() => handleTriggerScrape(city.city)}
+                  disabled={pipeline.running}
+                  className="text-[9px] font-bold px-2 py-1 bg-amber-600/30 border border-amber-500/50 text-amber-300 rounded hover:bg-amber-600/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {pipeline.running ? 'Scraping...' : 'Scrape'}
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </header>
 
       {/* Main View Container */}
       <main className="flex-1 p-6 flex flex-col items-center justify-start w-full max-w-7xl mx-auto gap-6">
@@ -251,10 +335,10 @@ function App() {
 
         {/* Tab contents */}
         <div className="w-full flex-1">
-          {activeTab === 'map' && <CityMap />}
-          {activeTab === 'network' && <NetworkGraph />}
-          {activeTab === 'directory' && <AnomalyTable />}
-          {activeTab === 'analytics' && <Analytics />}
+          {activeTab === 'map' && <CityMap selectedCity={selectedCity} />}
+          {activeTab === 'network' && <NetworkGraph selectedCity={selectedCity} />}
+          {activeTab === 'directory' && <AnomalyTable selectedCity={selectedCity} />}
+          {activeTab === 'analytics' && <Analytics selectedCity={selectedCity} />}
         </div>
       </main>
 

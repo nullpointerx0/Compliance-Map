@@ -525,23 +525,32 @@ def get_component_detail(id: int, db: Session = Depends(get_db)):
 
 # --- 8. aggregate counts for analytics dashboard ---
 @app.get("/api/stats/overview")
-def get_stats_overview(db: Session = Depends(get_db)):
+def get_stats_overview(city: Optional[str] = None, db: Session = Depends(get_db)):
     """
-    Aggregates global counter metrics for dashboard headers, such as total listings,
-    total compliant kitchens, and splits of Type A, B, and C anomalies.
+    Aggregates counter metrics for dashboard headers, optionally scoped to a city.
     """
-    total = db.query(Listing).count()
-    
-    compliant = db.query(Listing).join(FssaiMatch).filter(
+    listing_query = db.query(Listing)
+    if city:
+        listing_query = listing_query.filter(Listing.city == city)
+
+    total = listing_query.count()
+
+    compliant_query = db.query(Listing).join(FssaiMatch).filter(
         (FssaiMatch.status == "active") &
         (FssaiMatch.confidence >= settings.MATCH_THRESHOLD) &
         (FssaiMatch.expiry_date >= datetime.date.today())
-    ).count()
-    
-    type_a = db.query(Anomaly).filter(Anomaly.anomaly_type == "A_no_record").count()
-    type_b = db.query(Anomaly).filter(Anomaly.anomaly_type == "B_expired").count()
-    type_c = db.query(Anomaly).filter(Anomaly.anomaly_type == "C_multi_brand").count()
-    
+    )
+    if city:
+        compliant_query = compliant_query.filter(Listing.city == city)
+    compliant = compliant_query.count()
+
+    anomaly_query = db.query(Anomaly).join(Listing)
+    if city:
+        anomaly_query = anomaly_query.filter(Listing.city == city)
+    type_a = anomaly_query.filter(Anomaly.anomaly_type == "A_no_record").count()
+    type_b = anomaly_query.filter(Anomaly.anomaly_type == "B_expired").count()
+    type_c = anomaly_query.filter(Anomaly.anomaly_type == "C_multi_brand").count()
+
     return {
         "total_listings": total,
         "compliant_count": compliant,
@@ -556,41 +565,41 @@ def get_stats_overview(db: Session = Depends(get_db)):
 
 # --- 9. Swiggy vs Zomato compliance rates per city ---
 @app.get("/api/stats/platform-comparison")
-def get_platform_comparison(db: Session = Depends(get_db)):
+def get_platform_comparison(city: Optional[str] = None, db: Session = Depends(get_db)):
     """
-    Compares FSSAI compliance rates between Swiggy and Zomato across all 10 cities,
-    surfacing differences in platform-level enforcement.
+    Compares FSSAI compliance rates between Swiggy and Zomato.
     """
     data = []
-    for city in settings.CITIES:
-        city_stats = {"city": city}
-        
+    cities = [city] if city else settings.CITIES
+    for city_name in cities:
+        city_stats = {"city": city_name}
+
         for platform in ["swiggy", "zomato"]:
-            total = db.query(Listing).filter((Listing.city == city) & (Listing.platform == platform)).count()
-            
+            total = db.query(Listing).filter((Listing.city == city_name) & (Listing.platform == platform)).count()
+
             if total == 0:
                 city_stats[f"{platform}_rate"] = 100.0
                 city_stats[f"{platform}_count"] = 0
                 continue
-                
+
             compliant = db.query(Listing).join(FssaiMatch).filter(
-                (Listing.city == city) &
+                (Listing.city == city_name) &
                 (Listing.platform == platform) &
                 (FssaiMatch.status == "active") &
                 (FssaiMatch.confidence >= settings.MATCH_THRESHOLD) &
                 (FssaiMatch.expiry_date >= datetime.date.today())
             ).count()
-            
+
             city_stats[f"{platform}_rate"] = round((compliant / total) * 100, 2)
             city_stats[f"{platform}_count"] = total
-            
+
         data.append(city_stats)
-        
+
     return data
 
 # --- 10. compliance rate by price range ---
 @app.get("/api/stats/price-compliance")
-def get_price_compliance(db: Session = Depends(get_db)):
+def get_price_compliance(city: Optional[str] = None, db: Session = Depends(get_db)):
     """
     Aggregates licensing compliance rates grouped by listings' price ranges (₹ / ₹₹ / ₹₹₹),
     testing the academic hypothesis that budget kitchens exhibit lower compliance.
@@ -599,17 +608,23 @@ def get_price_compliance(db: Session = Depends(get_db)):
     price_brackets = ["₹", "₹₹", "₹₹₹"]
     
     for price in price_brackets:
-        total = db.query(Listing).filter(Listing.price_range == price).count()
+        total_query = db.query(Listing).filter(Listing.price_range == price)
+        if city:
+            total_query = total_query.filter(Listing.city == city)
+        total = total_query.count()
         if total == 0:
             data.append({"price_range": price, "total_listings": 0, "compliance_rate": 100.0})
             continue
             
-        compliant = db.query(Listing).join(FssaiMatch).filter(
+        compliant_query = db.query(Listing).join(FssaiMatch).filter(
             (Listing.price_range == price) &
             (FssaiMatch.status == "active") &
             (FssaiMatch.confidence >= settings.MATCH_THRESHOLD) &
             (FssaiMatch.expiry_date >= datetime.date.today())
-        ).count()
+        )
+        if city:
+            compliant_query = compliant_query.filter(Listing.city == city)
+        compliant = compliant_query.count()
         
         data.append({
             "price_range": price,
@@ -626,11 +641,17 @@ from app.scraper import scrape_city
 from app.matcher import run_matching
 from app.graph_engine import build_network_graph
 import threading
+import csv
+from pathlib import Path
+import shutil
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 
 class TriggerScrapeRequest(BaseModel):
     cities: Optional[List[str]] = None
+
+class LoadSnapshotRequest(BaseModel):
+    city: str
 
 pipeline_status = {
     "running": False,
@@ -640,12 +661,71 @@ pipeline_status = {
     "error": None
 }
 
+def ensure_snapshots_dir():
+    snapshot_dir = Path("data/snapshots")
+    snapshot_dir.mkdir(parents=True, exist_ok=True)
+    legacy_file = Path("data/bengaluru_swiggy_snapshot.csv")
+    new_file = snapshot_dir / "bengaluru_snapshot.csv"
+    if legacy_file.exists() and not new_file.exists():
+        try:
+            shutil.copy(legacy_file, new_file)
+            print(f"[Startup] Copied legacy snapshot from {legacy_file} to {new_file}")
+        except Exception as e:
+            print(f"[Startup] Warning: could not copy legacy snapshot: {e}")
+
+def save_city_snapshot(city: str, db):
+    """Save scraped listings to CSV after successful scrape."""
+    snapshot_dir = Path("data/snapshots")
+    snapshot_dir.mkdir(exist_ok=True, parents=True)
+    
+    filepath = snapshot_dir / f"{city.lower().replace(' ', '_')}_snapshot.csv"
+    listings = db.query(Listing).filter(
+        Listing.city == city,
+        Listing.url_slug.like('swiggy_%')
+    ).all()
+    
+    with open(filepath, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            'platform','brand_name','url_slug','city','zone',
+            'address','latitude','longitude','price_range',
+            'cuisine_tags','scraped_at'
+        ])
+        writer.writeheader()
+        for l in listings:
+            scraped_at_str = ""
+            if l.scraped_at:
+                if hasattr(l.scraped_at, 'isoformat'):
+                    scraped_at_str = l.scraped_at.isoformat()
+                else:
+                    scraped_at_str = str(l.scraped_at)
+            writer.writerow({
+                'platform': l.platform,
+                'brand_name': l.brand_name,
+                'url_slug': l.url_slug,
+                'city': l.city,
+                'zone': l.zone,
+                'address': l.address,
+                'latitude': l.latitude,
+                'longitude': l.longitude,
+                'price_range': l.price_range,
+                'cuisine_tags': l.cuisine_tags,
+                'scraped_at': scraped_at_str,
+            })
+    print(f"[Snapshot] Saved {len(listings)} listings to {filepath}")
+    return filepath
+
+
+def load_snapshot_for_city(city: str, db: Session) -> int:
+    from data.snapshot_loader import load_snapshot_for_city as _load_snapshot_for_city
+
+    return _load_snapshot_for_city(city=city, db=db)
+
 def run_pipeline_task(cities: List[str]):
     global pipeline_status
     started_time = datetime.datetime.utcnow().isoformat()
     pipeline_status = {
         "running": True,
-        "step": "scraping",
+        "step": "starting",
         "started_at": started_time,
         "finished_at": None,
         "error": None
@@ -653,18 +733,23 @@ def run_pipeline_task(cities: List[str]):
     
     db = SessionLocal()
     try:
-        # Step 1: Scrape target cities sequentially
         for city in cities:
+            # 1. Scrape
+            pipeline_status["step"] = f"scraping ({city})"
             scrape_city(db, city)
             
-        # Step 2: Match
-        pipeline_status["step"] = "matching"
-        run_matching()
-        
-        # Step 3: Graph Engine
-        pipeline_status["step"] = "graph_generation"
-        build_network_graph()
-        
+            # 2. Match
+            pipeline_status["step"] = f"matching ({city})"
+            run_matching()
+            
+            # 3. Graph Engine
+            pipeline_status["step"] = f"graph_generation ({city})"
+            build_network_graph()
+            
+            # 4. Save snapshot
+            pipeline_status["step"] = f"saving_snapshot ({city})"
+            save_city_snapshot(city, db)
+            
         pipeline_status["running"] = False
         pipeline_status["step"] = "completed"
         pipeline_status["finished_at"] = datetime.datetime.utcnow().isoformat()
@@ -755,4 +840,75 @@ def get_scrape_status(db: Session = Depends(get_db)):
             })
     return results
 
+@app.get("/api/admin/snapshots")
+def get_snapshots():
+    ensure_snapshots_dir()
+    snapshot_dir = Path("data/snapshots")
+    results = []
+    
+    if not snapshot_dir.exists():
+        return results
+        
+    for p in snapshot_dir.glob("*_snapshot.csv"):
+        filename = p.name
+        city_lower = filename[:-13].replace('_', ' ')
+        
+        display_city = city_lower.title()
+        for c in settings.CITIES:
+            if c.lower() == city_lower:
+                display_city = c
+                break
+                
+        try:
+            stat = p.stat()
+            size_kb = round(stat.st_size / 1024, 2)
+            last_updated = datetime.datetime.fromtimestamp(stat.st_mtime).isoformat()
+        except Exception:
+            size_kb = 0.0
+            last_updated = None
+            
+        results.append({
+            "city": display_city,
+            "file": filename,
+            "size_kb": size_kb,
+            "last_updated": last_updated
+        })
+    return results
 
+@app.post("/api/admin/load-snapshot")
+def load_snapshot_endpoint(req: LoadSnapshotRequest, db: Session = Depends(get_db)):
+    if req.city not in settings.CITIES:
+        raise HTTPException(status_code=400, detail=f"Invalid city specified: {req.city}")
+        
+    from app.scraper import update_city_status
+    try:
+        loaded_count = load_snapshot_for_city(req.city, db)
+        run_matching()
+        build_network_graph()
+        update_city_status(db, req.city, status="completed")
+        return {"loaded": loaded_count, "status": "complete"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error loading snapshot: {str(e)}")
+
+@app.on_event("startup")
+async def startup_event():
+    ensure_snapshots_dir()
+    db = SessionLocal()
+    try:
+        from app.scraper import update_city_status
+        
+        for city in settings.CITIES:
+            count = db.query(Listing).filter(Listing.city == city).count()
+            if count == 0:
+                snapshot_file = Path("data/snapshots") / f"{city.lower().replace(' ', '_')}_snapshot.csv"
+                if snapshot_file.exists():
+                    print(f"[Startup] Listings table is empty for city: {city}. Snapshot exists. Auto-loading snapshot...")
+                    loaded_count = load_snapshot_for_city(city=city, db=db)
+                    if loaded_count > 0:
+                        run_matching()
+                        build_network_graph()
+                    update_city_status(db, city, status="completed")
+    except Exception as e:
+        print(f"[Startup] Error in auto-loading snapshots on startup: {e}")
+    finally:
+        db.close()
