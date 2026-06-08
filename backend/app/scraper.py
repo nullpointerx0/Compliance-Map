@@ -1,5 +1,9 @@
 import asyncio
 import os
+import sys
+import time
+import requests
+import re
 import random
 import json
 import logging
@@ -9,11 +13,19 @@ from playwright.async_api import async_playwright
 
 from app.config import settings
 from app.database import SessionLocal, init_db
-from app.models import Listing
+from app.models import Listing, CityScrapeStatus
+import datetime
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
+
+def polite_sleep(min_sec=5, max_sec=8):
+    """Sleep a random duration to avoid bot detection."""
+    delay = random.uniform(min_sec, max_sec)
+    print(f"[Scraper] Sleeping {delay:.1f}s...")
+    time.sleep(delay)
+
 
 # Directory where snapshots are stored
 SNAPSHOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scraper", "snapshots")
@@ -407,6 +419,324 @@ def parse_listings_from_html(html_content: str, platform: str, city: str) -> lis
     return listings
 
 
+def update_city_status(db: Session, city: str, status: str, listing_count: int = None):
+    """
+    Updates the execution status of a city in the database.
+    """
+    record = db.query(CityScrapeStatus).filter(CityScrapeStatus.city == city).first()
+    if not record:
+        record = CityScrapeStatus(city=city)
+        db.add(record)
+    
+    record.status = status
+    record.last_scraped_at = datetime.datetime.utcnow()
+    if listing_count is not None:
+        record.listing_count = listing_count
+    else:
+        cnt = db.query(Listing).filter(
+            Listing.city == city,
+            Listing.platform == 'swiggy',
+            Listing.url_slug.like('swiggy_%')
+        ).count()
+        record.listing_count = cnt
+    db.commit()
+
+ZONE_NORMALIZE = {
+    "Bengaluru": {
+        # RT Nagar variants
+        'RT Nagar': 'RT Nagar',
+        'R.T. Nagar': 'RT Nagar',
+        'R T Nagar': 'RT Nagar',
+        'Sanjay Nagar': 'RT Nagar',
+        'Sanjaynagar': 'RT Nagar',
+        'Sanjay Nagar, New BEL Road': 'RT Nagar',
+        'New BEL Road': 'RT Nagar',
+        'NEW BEL ROAD': 'RT Nagar',
+        'BEL-Road': 'RT Nagar',
+        'BEL Road': 'RT Nagar',
+
+        # Rajajinagar variants
+        'Rajajinagar': 'Rajajinagar',
+        'Rajaji Nagar': 'Rajajinagar',
+        'RAJAJINAGAR': 'Rajajinagar',
+        'RAJAJI NAGAR': 'Rajajinagar',
+        'SR Nagar': 'Rajajinagar',
+        'Basaveshwara Nagar': 'Rajajinagar',
+        'West Bangalore': 'Rajajinagar',
+
+        # BTM variants
+        'BTM': 'BTM Layout',
+        'Btm Layout': 'BTM Layout',
+        'BTM 1st Stage': 'BTM Layout',
+        'BTM 2nd Stage': 'BTM Layout',
+        'BTM Layout, Bengaluru': 'BTM Layout',
+
+        # Malleshwaram variants
+        'MALLESHWARM': 'Malleshwaram',
+        'Malleshwaram': 'Malleshwaram',
+        'Orion Mall': 'Malleshwaram',
+        'Mantri mall': 'Malleshwaram',
+        'Sadashivanagar': 'Malleshwaram',
+        'sadashiva nagar ': 'Malleshwaram',
+        'Seshadripuram': 'Malleshwaram',
+
+        # Marathahalli variants
+        'MARATHALLI': 'Marathahalli',
+        'Marathahalli': 'Marathahalli',
+        'Bellandur': 'Marathahalli',
+        'Outer Ring Road': 'Marathahalli',
+        '77 Town Centre': 'Marathahalli',
+        'Marathahalli Outer Ring Rd': 'Marathahalli',
+
+        # Koramangala variants
+        'Koramangla': 'Koramangala',
+        'Kormangla': 'Koramangala',
+        'Koramangala BDA Complex': 'Koramangala',
+        '5TH BLOCK': 'Koramangala',
+
+        # HSR Layout variants
+        'Hsr Layout': 'HSR Layout',
+        'Hsr Layout 5th Sector': 'HSR Layout',
+
+        # JP Nagar variants
+        'JP NAGAR 6th phase': 'JP Nagar',
+        'J P Nagar': 'JP Nagar',
+        'RBI Layout': 'JP Nagar',
+        'YELACHENAHALLI': 'JP Nagar',
+        'Yelachenahalli': 'JP Nagar',
+
+        # Hebbal variants
+        'Hebbala': 'Hebbal',
+        'Sahakar Nagar': 'Hebbal',
+        'RMZ AZUR': 'Hebbal',
+        'PHOENIX MALL OF ASIA': 'Hebbal',
+
+        # Vittal Mallya variants
+        'Vittal Mallaya': 'Central Bangalore',
+        'Vittal Mallya Road': 'Central Bangalore',
+
+        # Misc single-count cleanup
+        'Uthrhalli main road': 'Banashankari',
+        'Uttarahalli': 'Banashankari',
+        'Naagarabhaavi': 'Vijayanagar',
+        'Nagarbhavi': 'Vijayanagar',
+        'Cunnigham road': 'Central Bangalore',
+        'Cunningham Road': 'Central Bangalore',
+        'Pattandur, Agrahara': 'Whitefield',
+        'Manorayanapalya': 'RT Nagar',
+        'Ganganagar': 'RT Nagar',
+        'Yemalur': 'Whitefield',
+        'Kadugodi': 'Whitefield',
+        'Mahadevapura': 'Whitefield',
+        'Sobha Mall': 'Whitefield',
+        
+        'VHBCS LAYOUT, Girinagar': 'Banashankari',
+        'Arekere': 'Banashankari',
+        'Kumaraswamy Layout': 'Banashankari',
+        'Kanakapura Road': 'Banashankari',
+        'Sathya Sai Layout': 'Banashankari',
+        'Vega city Mall': 'Banashankari',
+
+        # Mall/landmark addresses → nearest zone
+        'UB City': 'Central Bangalore',
+        'Victoria Road': 'Central Bangalore',
+        'Richmond Road': 'Central Bangalore',
+        'Brigade Rd': 'Central Bangalore',
+        'Shivaji Nagar': 'Central Bangalore',
+        'Vasanth Nagar': 'Central Bangalore',
+        'St. Marks Road': 'Central Bangalore',
+        'Ashok Nagar': 'Central Bangalore',
+
+        # Jayanagar variants
+        'Basavanagudi': 'Jayanagar',
+    }
+}
+
+def scrape_city(db: Session, city_name: str):
+    logger.info(f"Starting real Swiggy API scraper for {city_name}...")
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+        'Referer': 'https://www.swiggy.com/',
+        '__fetch_req__': 'true'
+    }
+    
+    # Import CITY_COORDS from app.config
+    from app.config import CITY_COORDS
+    if city_name not in CITY_COORDS:
+        logger.error(f"Coordinates for city {city_name} not found in config.")
+        raise ValueError(f"City {city_name} coordinates not configured.")
+        
+    coords = CITY_COORDS[city_name]
+    city_zone_map = ZONE_NORMALIZE.get(city_name, {})
+    
+    # Update status to in_progress
+    update_city_status(db, city_name, status="in_progress")
+    
+    processed_slugs = set()
+    price_dist = {"₹": 0, "₹₹": 0, "₹₹₹": 0}
+    coordinate_breakdown = []
+    
+    try:
+        # Delete existing real Swiggy listings for this city
+        deleted_count = db.query(Listing).filter(
+            Listing.city == city_name,
+            Listing.platform == 'swiggy',
+            Listing.url_slug.like('swiggy_%')
+        ).delete(synchronize_session=False)
+        db.commit()
+        logger.info(f"Cleared {deleted_count} old real Swiggy listings for {city_name}.")
+        
+        for idx, (lat, lng, coord_name) in enumerate(coords):
+            # 5-8 second delay between coordinate requests
+            if idx > 0:
+                polite_sleep(5, 8)
+                
+            url = f"https://www.swiggy.com/dapi/restaurants/list/v5?lat={lat}&lng={lng}&page_type=DESKTOP_WEB_LISTING"
+            logger.info(f"Fetching Swiggy page for {city_name} - {coord_name} ({lat}, {lng})...")
+            
+            try:
+                r = requests.get(url, headers=headers, timeout=15)
+                if r.status_code == 403:
+                    logger.error("HTTP 403 Forbidden received from Swiggy API!")
+                    raise Exception(f"Swiggy API 403 Forbidden for {city_name} - {coord_name}.")
+                
+                if r.status_code != 200:
+                    logger.error(f"HTTP {r.status_code} received from Swiggy API: {r.text[:200]}")
+                    coordinate_breakdown.append({
+                        "name": coord_name,
+                        "lat": lat,
+                        "lng": lng,
+                        "status": f"HTTP {r.status_code}",
+                        "fetched": 0,
+                        "new_unique": 0
+                    })
+                    continue
+                    
+                resp_data = r.json()
+                cards = resp_data.get("data", {}).get("cards", [])
+                restaurants = []
+                
+                for card in cards:
+                    grid_elements = card.get("card", {}).get("card", {}).get("gridElements", {})
+                    info_with_style = grid_elements.get("infoWithStyle", {})
+                    rests = info_with_style.get("restaurants", [])
+                    if rests:
+                        restaurants.extend(rests)
+                
+                fetched_count = len(restaurants)
+                new_unique_count = 0
+                
+                for rest in restaurants:
+                    info = rest.get("info", {})
+                    if not info:
+                        continue
+                        
+                    rest_id = info.get("id")
+                    if not rest_id:
+                        continue
+                    
+                    url_slug = f"swiggy_{rest_id}"
+                    
+                    # Check for uniqueness
+                    if url_slug in processed_slugs:
+                        continue
+                    
+                    name = info.get("name")
+                    area_name = info.get("areaName", "General")
+                    locality = info.get("locality", "")
+                    
+                    # Normalize zone name
+                    zone = city_zone_map.get(area_name, area_name)
+                    
+                    # Coordinates
+                    r_lat = info.get("latitude")
+                    r_lng = info.get("longitude")
+                    try:
+                        r_lat = float(r_lat) if r_lat is not None else lat
+                        r_lng = float(r_lng) if r_lng is not None else lng
+                    except:
+                        r_lat = lat
+                        r_lng = lng
+                        
+                    # Cost for two mapping
+                    cost_str = info.get("costForTwo", "")
+                    price_range = "₹"
+                    nums = re.findall(r"\d+", cost_str)
+                    if nums:
+                        cost_val = int(nums[0])
+                        if cost_val < 300:
+                            price_range = "₹"
+                        elif cost_val <= 600:
+                            price_range = "₹₹"
+                        else:
+                            price_range = "₹₹₹"
+                            
+                    price_dist[price_range] += 1
+                    
+                    address = f"{locality}, {city_name}" if locality else city_name
+                    
+                    # Double check database
+                    existing = db.query(Listing).filter(Listing.url_slug == url_slug).first()
+                    if not existing:
+                        new_listing = Listing(
+                            platform="swiggy",
+                            brand_name=name,
+                            url_slug=url_slug,
+                            city=city_name,
+                            zone=zone,
+                            address=address,
+                            latitude=r_lat,
+                            longitude=r_lng,
+                            price_range=price_range,
+                            cuisine_tags=json.dumps(info.get("cuisines", [])),
+                            scraped_at=datetime.datetime.utcnow()
+                        )
+                        db.add(new_listing)
+                        processed_slugs.add(url_slug)
+                        new_unique_count += 1
+                
+                db.commit()
+                logger.info(f"{coord_name}: Fetched {fetched_count} restaurants, {new_unique_count} new unique saved.")
+                coordinate_breakdown.append({
+                    "name": coord_name,
+                    "lat": lat,
+                    "lng": lng,
+                    "status": "Success",
+                    "fetched": fetched_count,
+                    "new_unique": new_unique_count
+                })
+                
+            except Exception as e:
+                logger.error(f"Error fetching from Swiggy API for {coord_name}: {e}")
+                raise e
+        
+        # Update status to completed
+        update_city_status(db, city_name, status="completed", listing_count=len(processed_slugs))
+        
+    except Exception as e:
+        logger.error(f"Error in scraping process for city {city_name}: {e}")
+        update_city_status(db, city_name, status="failed")
+        raise e
+
+    print("\n" + "="*50)
+    print(f"REAL SWIGGY SCRAPER RUN SUMMARY FOR {city_name.upper()}")
+    print(f"Total Unique Restaurants Fetched & Inserted: {len(processed_slugs)}")
+    print("\nPer-Coordinate Breakdown:")
+    for breakdown in coordinate_breakdown:
+        print(f" - {breakdown['name']} ({breakdown['lat']}, {breakdown['lng']}): "
+              f"Status: {breakdown['status']}, Fetched: {breakdown['fetched']}, New Unique: {breakdown['new_unique']}")
+    print(f"\nPrice range distribution: Rs.: {price_dist['₹']}, Rs.Rs.: {price_dist['₹₹']}, Rs.Rs.Rs.: {price_dist['₹₹₹']}")
+    print("="*50 + "\n")
+
+def scrape_real_swiggy_bengaluru(db: Session):
+    scrape_city(db, "Bengaluru")
+
+
+
+
 async def scrape_all():
     """
     Executes the scraper module across all 10 cities and 2 platforms.
@@ -415,6 +745,16 @@ async def scrape_all():
     init_db()
     db: Session = SessionLocal()
     
+    if settings.SCRAPER_MODE == "real":
+        try:
+            scrape_real_swiggy_bengaluru(db)
+        except Exception as e:
+            logger.error(f"Real scraper failed: {e}")
+            sys.exit(1)
+        finally:
+            db.close()
+        return
+        
     total_new_listings = 0
     
     try:

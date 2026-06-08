@@ -11,7 +11,8 @@ from sqlalchemy import func
 
 from app.config import settings
 from app.database import get_db, init_db
-from app.models import Listing, FssaiMatch, Anomaly, GraphEdge, Component
+from app.models import Listing, FssaiMatch, Anomaly, GraphEdge, Component, CityScrapeStatus
+
 
 # Initialize database schema on startup
 init_db()
@@ -617,3 +618,141 @@ def get_price_compliance(db: Session = Depends(get_db)):
         })
         
     return data
+
+
+# --- 11. Background Scraper & Pipeline Trigger ---
+from app.database import SessionLocal
+from app.scraper import scrape_city
+from app.matcher import run_matching
+from app.graph_engine import build_network_graph
+import threading
+from pydantic import BaseModel
+from fastapi.responses import JSONResponse
+
+class TriggerScrapeRequest(BaseModel):
+    cities: Optional[List[str]] = None
+
+pipeline_status = {
+    "running": False,
+    "step": "idle",
+    "started_at": None,
+    "finished_at": None,
+    "error": None
+}
+
+def run_pipeline_task(cities: List[str]):
+    global pipeline_status
+    started_time = datetime.datetime.utcnow().isoformat()
+    pipeline_status = {
+        "running": True,
+        "step": "scraping",
+        "started_at": started_time,
+        "finished_at": None,
+        "error": None
+    }
+    
+    db = SessionLocal()
+    try:
+        # Step 1: Scrape target cities sequentially
+        for city in cities:
+            scrape_city(db, city)
+            
+        # Step 2: Match
+        pipeline_status["step"] = "matching"
+        run_matching()
+        
+        # Step 3: Graph Engine
+        pipeline_status["step"] = "graph_generation"
+        build_network_graph()
+        
+        pipeline_status["running"] = False
+        pipeline_status["step"] = "completed"
+        pipeline_status["finished_at"] = datetime.datetime.utcnow().isoformat()
+    except Exception as e:
+        import traceback
+        error_msg = f"{str(e)}\n{traceback.format_exc()}"
+        pipeline_status["running"] = False
+        pipeline_status["step"] = "failed"
+        pipeline_status["error"] = error_msg
+        pipeline_status["finished_at"] = datetime.datetime.utcnow().isoformat()
+    finally:
+        db.close()
+
+@app.post("/api/admin/trigger-scrape")
+def trigger_scrape(req: Optional[TriggerScrapeRequest] = None, db: Session = Depends(get_db)):
+    global pipeline_status
+    if pipeline_status["running"]:
+        return JSONResponse(
+            status_code=400,
+            content={"error": "Pipeline is already running"}
+        )
+        
+    cities_to_scrape = []
+    if req and req.cities is not None:
+        cities_to_scrape = req.cities
+    else:
+        # Default: scrape only cities with no existing data (completed status is not set)
+        unscraped = db.query(CityScrapeStatus).filter(
+            (CityScrapeStatus.status.is_(None)) | (CityScrapeStatus.status != 'completed')
+        ).limit(2).all()
+        cities_to_scrape = [c.city for c in unscraped]
+        
+    if not cities_to_scrape:
+        return JSONResponse(
+            status_code=400,
+            content={"error": "No unscraped cities found to trigger"}
+        )
+        
+    if len(cities_to_scrape) > 2:
+        return JSONResponse(
+            status_code=400,
+            content={"error": "Max 2 cities per scrape run to avoid rate limiting"}
+        )
+        
+    for city in cities_to_scrape:
+        if city not in settings.CITIES:
+            return JSONResponse(
+                status_code=400,
+                content={"error": f"Invalid city specified: {city}"}
+            )
+            
+    thread = threading.Thread(target=run_pipeline_task, args=(cities_to_scrape,))
+    thread.daemon = True
+    thread.start()
+    
+    cities_str = ", ".join(cities_to_scrape)
+    return {
+        "status": "pipeline_started",
+        "message": f"Scraping {cities_str} data. Check /api/admin/pipeline-status for progress."
+    }
+
+@app.get("/api/admin/pipeline-status")
+def get_pipeline_status():
+    global pipeline_status
+    return pipeline_status
+
+@app.get("/api/admin/scrape-status")
+def get_scrape_status(db: Session = Depends(get_db)):
+    records = db.query(CityScrapeStatus).all()
+    records_map = {r.city: r for r in records}
+    
+    results = []
+    for city in settings.CITIES:
+        record = records_map.get(city)
+        if record:
+            results.append({
+                "city": city,
+                "status": record.status,
+                "last_scraped_at": record.last_scraped_at.isoformat() if record.last_scraped_at else None,
+                "listing_count": record.listing_count or 0
+            })
+        else:
+            results.append({
+                "city": city,
+                "status": None,
+                "last_scraped_at": None,
+                "listing_count": 0
+            })
+    return results
+
+

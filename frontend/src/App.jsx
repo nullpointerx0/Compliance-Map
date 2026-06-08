@@ -15,6 +15,9 @@ function App() {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const [backendOnline, setBackendOnline] = useState(true);
+  
+  const [pipeline, setPipeline] = useState({ running: false, step: 'idle' });
+  const [polling, setPolling] = useState(false);
 
   // Fetch top-level global audit statistics and check health
   useEffect(() => {
@@ -46,6 +49,70 @@ function App() {
     checkHealthAndFetchStats();
   }, []);
 
+  // Check initial pipeline status on mount
+  useEffect(() => {
+    async function getInitialPipelineStatus() {
+      try {
+        const response = await fetch(`${API_BASE}/api/admin/pipeline-status`);
+        if (response.ok) {
+          const data = await response.json();
+          setPipeline(data);
+          if (data.running) {
+            setPolling(true);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to get pipeline status:', err);
+      }
+    }
+    getInitialPipelineStatus();
+  }, []);
+
+  // Poll pipeline status if running
+  useEffect(() => {
+    let intervalId = null;
+    if (polling) {
+      intervalId = setInterval(async () => {
+        try {
+          const response = await fetch(`${API_BASE}/api/admin/pipeline-status`);
+          if (response.ok) {
+            const data = await response.json();
+            setPipeline(data);
+            if (!data.running) {
+              setPolling(false);
+              // Pipeline finished! Reload page to refresh all views with fresh DB state
+              window.location.reload();
+            }
+          }
+        } catch (err) {
+          console.error('Error polling pipeline status:', err);
+          setPolling(false);
+        }
+      }, 2000);
+    }
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, [polling]);
+
+  const handleTriggerScrape = async () => {
+    try {
+      const response = await fetch(`${API_BASE}/api/admin/trigger-scrape`, {
+        method: 'POST'
+      });
+      if (response.ok) {
+        setPipeline({ running: true, step: 'scraping' });
+        setPolling(true);
+      } else {
+        const errData = await response.json();
+        alert(`Failed to trigger pipeline: ${errData.detail || 'Unknown error'}`);
+      }
+    } catch (err) {
+      console.error('Error triggering scrape:', err);
+      alert('Error triggering scrape. Is the backend running?');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#090D16] text-gray-100 flex flex-col font-sans">
       {!backendOnline && (
@@ -62,7 +129,7 @@ function App() {
           </div>
           <div>
             <h1 className="text-xl font-black tracking-tight text-white flex items-center gap-2">
-              GHOST KITCHEN COMPLIANCE MONITOR
+               GHOST KITCHEN COMPLIANCE MONITOR
               <span className="text-[10px] font-mono tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded font-extrabold uppercase">
                 Academic Audit
               </span>
@@ -73,56 +140,76 @@ function App() {
           </div>
         </div>
 
-        {/* Tab Selector buttons */}
-        <div className="flex bg-darkBg border border-darkBorder p-1 rounded-xl">
+        <div className="flex flex-col sm:flex-row items-center gap-3">
+          {/* Refresh Data Button */}
           <button
-            onClick={() => setActiveTab('map')}
-            className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
-              activeTab === 'map' 
-                ? 'bg-emerald-500 text-white shadow-lg' 
-                : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
+            onClick={handleTriggerScrape}
+            disabled={pipeline.running}
+            className={`flex items-center gap-1.5 px-4.5 py-2 rounded-xl text-xs font-bold transition-all border ${
+              pipeline.running
+                ? 'bg-blue-600/15 border-blue-500/30 text-blue-400 cursor-not-allowed'
+                : 'bg-darkBg border-darkBorder text-gray-300 hover:text-white hover:bg-darkBorder/40'
             }`}
           >
-            <Map className="w-4 h-4" />
-            City Map
-          </button>
-          
-          <button
-            onClick={() => setActiveTab('network')}
-            className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
-              activeTab === 'network' 
-                ? 'bg-purple-600 text-white shadow-lg' 
-                : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
-            }`}
-          >
-            <Network className="w-4 h-4" />
-            Compliance Network
+            <RefreshCw className={`w-3.5 h-3.5 ${pipeline.running ? 'animate-spin' : ''}`} />
+            {pipeline.running 
+              ? `Running: ${pipeline.step.toUpperCase().replace('_', ' ')}` 
+              : 'Refresh Data'
+            }
           </button>
 
-          <button
-            onClick={() => setActiveTab('directory')}
-            className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
-              activeTab === 'directory' 
-                ? 'bg-red-500 text-white shadow-lg' 
-                : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
-            }`}
-          >
-            <Database className="w-4 h-4" />
-            Anomaly Directory
-          </button>
+          {/* Tab Selector buttons */}
+          <div className="flex bg-darkBg border border-darkBorder p-1 rounded-xl">
+            <button
+              onClick={() => setActiveTab('map')}
+              className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
+                activeTab === 'map' 
+                  ? 'bg-emerald-500 text-white shadow-lg' 
+                  : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
+              }`}
+            >
+              <Map className="w-4 h-4" />
+              City Map
+            </button>
+            
+            <button
+              onClick={() => setActiveTab('network')}
+              className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
+                activeTab === 'network' 
+                  ? 'bg-purple-600 text-white shadow-lg' 
+                  : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
+              }`}
+            >
+              <Network className="w-4 h-4" />
+              Compliance Network
+            </button>
 
-          <button
-            onClick={() => setActiveTab('analytics')}
-            className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
-              activeTab === 'analytics' 
-                ? 'bg-amber-500 text-white shadow-lg' 
-                : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
-            }`}
-          >
-            <BarChart3 className="w-4 h-4" />
-            Analytics Hub
-          </button>
+            <button
+              onClick={() => setActiveTab('directory')}
+              className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
+                activeTab === 'directory' 
+                  ? 'bg-red-500 text-white shadow-lg' 
+                  : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
+              }`}
+            >
+              <Database className="w-4 h-4" />
+              Anomaly Directory
+            </button>
+
+            <button
+              onClick={() => setActiveTab('analytics')}
+              className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg text-xs font-bold transition-all ${
+                activeTab === 'analytics' 
+                  ? 'bg-amber-500 text-white shadow-lg' 
+                  : 'text-gray-400 hover:text-white hover:bg-darkBorder/30'
+              }`}
+            >
+              <BarChart3 className="w-4 h-4" />
+              Analytics Hub
+            </button>
+          </div>
         </div>
+
       </header>
 
       {/* Main View Container */}

@@ -93,3 +93,16 @@ class Component(Base):
 
     # Relationships
     listing = relationship("Listing", back_populates="component")
+
+
+class CityScrapeStatus(Base):
+    """
+    SQLAlchemy model representing the scrape status of each city.
+    """
+    __tablename__ = 'city_scrape_status'
+
+    city = Column(String, primary_key=True)
+    last_scraped_at = Column(DateTime, nullable=True)
+    listing_count = Column(Integer, default=0)
+    status = Column(String, nullable=True)  # 'completed' | 'in_progress' | 'failed'
+
